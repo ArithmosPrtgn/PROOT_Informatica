@@ -193,6 +193,8 @@ footer {
     background-color: var(--accentColor);
 }
 
+/* Callouts  */
+
 .calloutBox {
     display: flex;
     overflow: hidden;
@@ -207,12 +209,13 @@ footer {
     max-width: 50vw;
     height: auto;
     transition: all ease 0.3s;
+    position: relative;
 }
 
-.calloutBox span, .calloutBox h3 { margin: 0 0 0 10px; }
+.foregroundCallOutIcon, .calloutBox h3 { margin: 0 0 0 10px; }
 
-.calloutBox span { 
-    font-size: 2rem;
+.foregroundCallOutIcon { 
+    font-size: 2rem !important;
     color: var(--invertedNonAccentColor);
 }
 
@@ -220,6 +223,7 @@ footer {
     display: flex;
     flex-direction: row;
     align-items: center;
+    overflow: hidden;
     padding: 10px;
     margin: -20px -20px 0px -20px;
 }
@@ -234,4 +238,14 @@ footer {
 .info, .info > div {
     border-color: var(--altInfoColor) !important;
     background-color: var(--surfaceInfoColor);
+}
+
+.backgroundCallOutIcon {
+    color: var(--invertedNonAccentColor);
+    transform: rotate(-30deg);
+        transform-origin: center;
+    position: absolute;
+        right: 10%;
+        bottom: 0%;
+    font-size: 7rem !important;
 }
