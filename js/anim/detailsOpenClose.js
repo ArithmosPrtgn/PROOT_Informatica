@@ -10,3 +10,15 @@ document.querySelectorAll('details.subjectSelection').forEach(el => {
         }, { once: true });
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.toggleContent').forEach((button) => {
+        button.addEventListener('click', () => {
+            const calloutBox = button.closest('.calloutBox');
+            if (calloutBox) {
+                calloutBox.classList.toggle('collapsed');
+            }
+        });
+    });
+});
+ 

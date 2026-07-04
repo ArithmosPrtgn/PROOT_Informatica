@@ -76,6 +76,11 @@ nav {
     overflow: hidden;
 }
 
+#theme,
+#theme * {
+    user-select: none;
+}
+
 #theme:hover {
     outline: none;
     transform: scale(0.9);

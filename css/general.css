@@ -176,13 +176,16 @@ button:active {
     transition: 0.3s;
 }
 
-.iconM {
-    margin-right: 5px;
-    color: var(--invertedNonAccentColor);
+.iconM { 
+    color: var(--invertedNonAccentColor); 
+    font-size: 3rem;
 }
+
+.iconMNeedsSpace { margin-right: 5px;}
 
 footer {
     width: 100%;
+    flex: 1 0 auto;
     display: flex;
     border-radius: 10px 10px 0 0;
     flex-direction: column;
@@ -206,10 +209,12 @@ footer {
     border-radius: 20px;
     background-color: var(--surfaceColor) !important;
     width: 90%;
-    max-width: 50vw;
+    max-width: 70vw;
+    margin: 10px 0;
     height: auto;
     transition: all ease 0.3s;
     position: relative;
+    isolation: isolate;
 }
 
 .foregroundCallOutIcon, .calloutBox h3 { margin: 0 0 0 10px; }
@@ -219,13 +224,25 @@ footer {
     color: var(--invertedNonAccentColor);
 }
 
+.calloutBox > :not(.backgroundCallOutIcon) {
+    position: relative;
+    z-index: 1;
+}
+
 .calloutBox > div {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     overflow: hidden;
     padding: 10px;
     margin: -20px -20px 0px -20px;
+}
+
+.calloutBox > div > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .calloutBox h4 { margin: 10px 0 -5px 0;}
@@ -241,11 +258,34 @@ footer {
 }
 
 .backgroundCallOutIcon {
-    color: var(--invertedNonAccentColor);
-    transform: rotate(-30deg);
+    color: var(--altInfoColor);
+    opacity: 0.25;
+    z-index: 0;
+    transform: rotate(-15deg);
         transform-origin: center;
     position: absolute;
-        right: 10%;
-        bottom: 0%;
-    font-size: 7rem !important;
+        right: 5%;
+        bottom: -40%;
+    font-size: 10rem !important;
+    pointer-events: none;
+    user-select: none;
 }
+
+.calloutBox h4 {
+    overflow: hidden;
+    max-height: 500px;
+    opacity: 1;
+    transition: max-height 0.35s ease, opacity 0.35s ease, margin 0.35s ease;
+}
+
+.calloutBox.collapsed h4 {
+    max-height: 0;
+    opacity: 0;
+    margin: 0;
+}
+
+.calloutBox.collapsed { padding-bottom: 0; }
+
+.toggleContent .iconM { transition: transform 0.3s ease; }
+
+.calloutBox.collapsed .toggleContent .iconM { transform: rotate(-180deg); }
