@@ -237,6 +237,7 @@ footer {
     overflow: hidden;
     padding: 10px;
     margin: -20px -20px 0px -20px;
+    transition: all ease 0.35s;
 }
 
 .calloutBox > div > div {
@@ -246,11 +247,6 @@ footer {
 }
 
 .calloutBox h4 { margin: 10px 0 -5px 0;}
-
-.calloutBox:hover, .calloutBox:focus {
-    border-width: 3px;
-    transform: scale(1.05);
-}
 
 .info {
     --calloutBorderColor: var(--altInfoColor);
@@ -352,6 +348,15 @@ footer {
 
 .calloutBox.collapsed .toggleContent .iconM { transform: rotate(-180deg); }
 
+.calloutBox:hover, .calloutBox:focus , .codeBlock:hover, .codeBlock:focus {
+    border-width: 3px;
+    padding-left: 40px;
+    transform: scale(1.05);
+}
+
+.calloutBox:hover > div,
+.calloutBox:focus > div,
+.codeBlock:hover > .cBHeader { margin-left: -40px; }
 /*Códigos*/
 
 .codeBlock {
@@ -364,11 +369,12 @@ footer {
     width: 90%;
     overflow: hidden;
     max-width: 70vw;
+    transition: all 0.3s ease;
 }
 
 .codeBlock > pre {
     margin: 0;
-    padding: 20px;
+    padding: 20px 0 0 0;
     overflow-x: auto;
     font-family: 'Courier New', Courier, monospace;
     color: var(--nonAccentColor);
@@ -380,7 +386,18 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px 10px 10px 20px;
     background-color: var(--surfaceColor);
     margin: -20px -20px 0 -20px;
+    transition: all 0.3s ease;
+}
+
+.codeBlock pre code.hljs {
+    background: transparent !important;
+    padding: 0; /* Optional: removes default padding if you already added it to the <pre> */
+}
+
+@media screen and (max-width: 350px){
+    .cBButton > h4 { display: none; }
+    .cBButton > span { margin: 0;}
 }

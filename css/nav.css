@@ -145,6 +145,7 @@ body.L .icoAniTheme { font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "
         justify-content: center;   
         align-items: center;       
         width: 100%;
+        margin: 5px;
     }
 
 
