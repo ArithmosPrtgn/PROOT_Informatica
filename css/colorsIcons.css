@@ -2,16 +2,41 @@
     --accentColor: #ff4848;
         --altAccentColor: #960101;
 
-    --infoColor: #6d94ff;
-        --altInfoColor: #2148b3;
-        --surfaceInfoColor: #afc5ff;
+    --infoColor: hsl(224, 100%, 71%);
+        --altInfoColor: hsl(224, 69%, 42%);
+        --surfaceInfoColor: hsl(224, 100%, 84%);
+
+    --warningColor: hsl(32, 100%, 71%);
+        --altWarningColor: hsl(32, 69%, 42%); 
+        --surfaceWarningColor: hsl(32, 100%, 84%);
+    
+    --tipColor: #c96dff;
+        --altTipColor: hsl(278, 69%, 42%);
+        --surfaceTipColor: hsl(278, 100%, 84%);
+    
+    --criticalColor: #ff6d6d;
+        --altCriticalColor: hsl(0,69%, 42%);
+        --surfaceCriticalColor: hsl(0, 100%, 84%);
+
+    --exampleColor: #6dffe7;
+        --altExampleColor: hsl(169, 69%, 42%);
+        --surfaceExampleColor: hsl(169, 100%, 84%);
+
+    --yesColor: hsl(128, 100%, 71%);
+        --altYesColor: hsl(120, 69%, 42%);
+        --surfaceYesColor: hsl(128, 100%, 84%);
+    
+    --questionColor: hsl(73, 100%, 71%);
+        --altQuestionColor: hsl(73, 69%, 42%);
+        --surfaceQuestionColor: hsl(73, 100%, 84%);
+
+    --bugColor: hsl(273, 100%, 71%);
+        --altBugColor: hsl(273, 69%, 42%);
+        --surfaceBugColor: hsl(273, 100%, 84%);
 
     --nonAccentColor: #fafafa;
         --invertedNonAccentColor: #050505;
-    --yesColor: #00aa00;
-        --altYesColor: #005e00;
-    --noColor: #f34646;
-        --altNoColor: #8a0000;
+
     --surfaceColor: #f0eded; 
 }
 
@@ -19,17 +44,41 @@
     --altAccentColor: #ff4848;
         --accentColor: #960101;
 
-    --altInfoColor: #6d94ff;
-        --infoColor: #2148b3;
-        --surfaceInfoColor: #1f2b4d;
+    --altInfoColor: hsl(224, 100%, 71%);
+        --infoColor: hsl(224, 69%, 42%);
+        --surfaceInfoColor: hsl(224, 43%, 21%);
     
+    --warningColor: hsl(32, 69%, 42%);
+        --altWarningColor: hsl(32, 100%, 71%);
+        --surfaceWarningColor: hsl(32, 43%, 21%);
+    
+    --tipColor: hsl(278, 69%, 42%);
+        --altTipColor: hsl(278, 100%, 71%);
+        --surfaceTipColor: hsl(278, 43%, 21%);
+    
+    --criticalColor: hsl(0, 69%, 42%);
+        --altCriticalColor: hsl(0, 100%, 71%);
+        --surfaceCriticalColor: hsl(0, 43%, 21%);
+
+    --exampleColor: hsl(169, 69%, 42%);
+        --altExampleColor: hsl(169, 100%, 71%);
+        --surfaceExampleColor: hsl(169, 43%, 21%);
+
+    --yesColor: hsl(128, 69%, 42%);
+        --altYesColor: hsl(128, 100%, 71%);
+        --surfaceYesColor: hsl(128, 43%, 21%);
+    
+    --questionColor: hsl(73, 69%, 42%);
+        --altQuestionColor: hsl(73, 100%, 71%);
+        --surfaceQuestionColor: hsl(73, 43%, 21%);
+
+    --bugColor: hsl(273, 69%, 42%);
+        --altBugColor: hsl(273, 100%, 71%);
+        --surfaceBugColor: hsl(273, 43%, 21%);
 
     --invertedNonAccentColor: #fafafa;
         --nonAccentColor: #050505;
-    --altYesColor: #00aa00;
-        --yesColor: #005e00;
-    --altNoColor: #f34646;
-        --noColor: #8a0000;
+
     --surfaceColor: #1a1a1a;
 }
 

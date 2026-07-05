@@ -252,13 +252,75 @@ footer {
     transform: scale(1.05);
 }
 
-.info, .info > div {
-    border-color: var(--altInfoColor) !important;
-    background-color: var(--surfaceInfoColor);
+.info {
+    --calloutBorderColor: var(--altInfoColor);
+    --calloutSurfaceColor: var(--surfaceInfoColor);
+    --calloutIconColor: var(--altInfoColor);
 }
 
-.backgroundCallOutIcon {
-    color: var(--altInfoColor);
+.warning {
+    --calloutBorderColor: var(--altWarningColor);
+    --calloutSurfaceColor: var(--surfaceWarningColor);
+    --calloutIconColor: var(--altWarningColor);
+}
+
+.tip {
+    --calloutBorderColor: var(--altTipColor);
+    --calloutSurfaceColor: var(--surfaceTipColor);
+    --calloutIconColor: var(--altTipColor);
+}
+
+.critical {
+    --calloutBorderColor: var(--altCriticalColor);
+    --calloutSurfaceColor: var(--surfaceCriticalColor);
+    --calloutIconColor: var(--altCriticalColor);
+}
+
+.example {
+    --calloutBorderColor: var(--altExampleColor);
+    --calloutSurfaceColor: var(--surfaceExampleColor);
+    --calloutIconColor: var(--altExampleColor);
+}
+
+.yes {
+    --calloutBorderColor: var(--altYesColor);
+    --calloutSurfaceColor: var(--surfaceYesColor);
+    --calloutIconColor: var(--altYesColor);
+}
+
+.question {
+    --calloutBorderColor: var(--altQuestionColor);
+    --calloutSurfaceColor: var(--surfaceQuestionColor);
+    --calloutIconColor: var(--altQuestionColor);
+}
+
+.bug {
+    --calloutBorderColor: var(--altBugColor);
+    --calloutSurfaceColor: var(--surfaceBugColor);
+    --calloutIconColor: var(--altBugColor);
+}
+
+.info, .info > div,
+.warning, .warning > div,
+.tip, .tip > div,
+.critical, .critical > div,
+.example, .example > div,
+.yes, .yes > div,
+.question, .question > div,
+.bug, .bug > div {
+    border-color: var(--calloutBorderColor) !important;
+    background-color: var(--calloutSurfaceColor);
+}
+
+.info > .backgroundCallOutIcon,
+.warning > .backgroundCallOutIcon,
+.tip > .backgroundCallOutIcon,
+.critical > .backgroundCallOutIcon,
+.example > .backgroundCallOutIcon,
+.yes > .backgroundCallOutIcon,
+.question > .backgroundCallOutIcon,
+.bug > .backgroundCallOutIcon {
+    color: var(--calloutIconColor);
     opacity: 0.25;
     z-index: 0;
     transform: rotate(-15deg);
