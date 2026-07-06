@@ -1,49 +1,29 @@
-function initTheme() {
-  const btn = document.getElementById("theme");
-  if (!btn) return console.warn("Theme button not found");
+const themeToggleHelperUrl = '/js/darkMode/themeToggle.js';
 
-  const icon = btn.querySelector(".icoAniTheme");
-  const body = document.body;
-  const savedTheme = localStorage.getItem("CT");
-  let isAnimating = false;
-
-  if (savedTheme === "L") {
-    body.classList.add("L");
-    if (icon) icon.innerText = "sunny";
+function ensureThemeToggleHelper() {
+  if (window.SUAEThemeToggle) {
+    return Promise.resolve(window.SUAEThemeToggle);
   }
 
-  btn.addEventListener("click", () => {
-    if (!icon || isAnimating) return;
+  if (!window.__SUAEThemeTogglePromise) {
+    window.__SUAEThemeTogglePromise = new Promise((resolve, reject) => {
+      const script = document.createElement('script');
+      script.src = themeToggleHelperUrl;
+      script.onload = () => resolve(window.SUAEThemeToggle);
+      script.onerror = () => reject(new Error('Theme toggle helper failed to load'));
+      document.head.append(script);
+    });
+  }
 
-    isAnimating = true;
-    const nextThemeIsLight = !body.classList.contains("L");
-    const motionClass = nextThemeIsLight ? "is-forward" : "is-reverse";
-
-    icon.classList.remove("is-entering");
-    icon.classList.remove("is-forward", "is-reverse");
-    icon.classList.add(motionClass);
-    icon.classList.add("is-leaving");
-
-    const handleExit = () => {
-      icon.removeEventListener("animationend", handleExit);
-      body.classList.toggle("L", nextThemeIsLight);
-      localStorage.setItem("CT", nextThemeIsLight ? "L" : "D");
-      icon.innerText = nextThemeIsLight ? "sunny" : "moon_stars";
-      icon.classList.remove("is-leaving");
-      icon.classList.add("is-entering");
-
-      const handleEnter = () => {
-        icon.removeEventListener("animationend", handleEnter);
-        icon.classList.remove("is-entering");
-        icon.classList.remove("is-forward", "is-reverse");
-        isAnimating = false;
-      };
-
-      icon.addEventListener("animationend", handleEnter, { once: true });
-    };
-
-    icon.addEventListener("animationend", handleExit, { once: true });
-  });
+  return window.__SUAEThemeTogglePromise;
 }
 
-document.addEventListener("headerLoaded", initTheme);
+async function initTheme() {
+  const btn = document.getElementById('theme');
+  if (!btn) return console.warn('Theme button not found');
+
+  const themeToggle = await ensureThemeToggleHelper();
+  themeToggle.attach(btn);
+}
+
+document.addEventListener('headerLoaded', initTheme);
