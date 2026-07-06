@@ -5,6 +5,7 @@
 
 	let printFrame = null;
 	let isPrinting = false;
+	let cleanupBound = false;
 
 	function collectPrintableStyles() {
 		return Array.from(document.querySelectorAll('link[rel="stylesheet"], style'))
@@ -46,11 +47,31 @@
 	}
 
 	function cleanupPrintFrame() {
+		if (!isPrinting && !printFrame) {
+			return;
+		}
+
 		if (printFrame) {
 			printFrame.remove();
 			printFrame = null;
 		}
 		isPrinting = false;
+		cleanupBound = false;
+		window.removeEventListener('afterprint', cleanupPrintFrame);
+		window.removeEventListener('focus', handlePrintReturn);
+		document.removeEventListener('visibilitychange', handleVisibilityReturn);
+	}
+
+	function handlePrintReturn() {
+		if (isPrinting) {
+			cleanupPrintFrame();
+		}
+	}
+
+	function handleVisibilityReturn() {
+		if (isPrinting && document.visibilityState === 'visible') {
+			cleanupPrintFrame();
+		}
 	}
 
 	function printMainAreaAsPdf() {
@@ -82,13 +103,14 @@
 			return;
 		}
 
-		const finishPrint = () => {
-			cleanupPrintFrame();
-			window.removeEventListener('afterprint', finishPrint);
-		};
+		if (!cleanupBound) {
+			cleanupBound = true;
+			window.addEventListener('afterprint', cleanupPrintFrame, { once: true });
+			window.addEventListener('focus', handlePrintReturn, { once: true });
+			document.addEventListener('visibilitychange', handleVisibilityReturn);
+		}
 
-		frameWindow.addEventListener('afterprint', finishPrint, { once: true });
-		window.addEventListener('afterprint', finishPrint, { once: true });
+		frameWindow.addEventListener('afterprint', cleanupPrintFrame, { once: true });
 
 		printFrame.addEventListener('load', () => {
 			window.setTimeout(() => {
