@@ -82,7 +82,13 @@
 			return;
 		}
 
-		frameWindow.addEventListener('afterprint', cleanupPrintFrame, { once: true });
+		const finishPrint = () => {
+			cleanupPrintFrame();
+			window.removeEventListener('afterprint', finishPrint);
+		};
+
+		frameWindow.addEventListener('afterprint', finishPrint, { once: true });
+		window.addEventListener('afterprint', finishPrint, { once: true });
 
 		printFrame.addEventListener('load', () => {
 			window.setTimeout(() => {
