@@ -1,6 +1,7 @@
 h1, h2, h3, h4, h5, h6,label, input, button { color: var(--invertedNonAccentColor); }
 
 h1 {
+    font-family: 'Cal Sans', sans-serif;
     font-size: clamp(2rem, 4vw, 3rem);
     margin: 5px 0 0 0;
     line-height: 1.2;
@@ -29,9 +30,9 @@ h4 {
 }
 
 p {
-    font-size: clamp(0.875rem, 1.2vw, 0.95rem);
+    font-size: clamp(0.9rem, 1.25vw, 1rem);
     line-height: 1.5;
-    max-width: 75vw;
+    max-width: 70vw;
     text-align: left;
 }
 
@@ -330,7 +331,7 @@ footer {
     position: absolute;
         right: 5%;
         bottom: -40%;
-    font-size: 200px !important;
+    font-size: 300px !important;
     pointer-events: none;
     user-select: none;
 }
@@ -408,3 +409,38 @@ footer {
     .cBButton > h4 { display: none; }
     .cBButton > span { margin: 0;}
 }
+
+table {
+    width: 75%;
+    background-color: var(--surfaceColor);
+    border: 5px solid var(--accentColor);
+    border-radius: 20px;
+    margin: 10px;
+    transition: all 0.3s ease;
+    overflow: auto;
+}
+
+tr > th {
+    font-family: 'Cal Sans', sans-serif;
+    background-color: var(--altAccentColor);
+    border-bottom: 5px var(--nonAccentColor);
+    color: var(--nonAccentColor);
+    padding: 10px 0;
+}
+
+tr > td {
+    background-color: var(--nonAccentColor);
+    color: var(--invertedNonAccentColor);
+    padding: 10px 0;
+}
+
+tr > th:first-child { border-radius: 15px 0 0 0; }
+tr > th:last-child { border-radius: 0 15px 0 0; }
+
+tr:last-child > td:last-child { border-radius: 0 0 15px 0; }
+tr:last-child > td:first-child { border-radius: 0 0 0 15px ; }
+
+
+table:hover { transform: scale(1.05); border-width: 10px;}
+
+.tabelaHeaderVert, .tabelaHeaderHor { width: 100%; display: flex; align-items: center; justify-content: center;}

@@ -172,7 +172,7 @@
         "texto": "[-] decrementa até 0"
     }, {
         "tipo": "code",
-        "titulo": "Copiar valor de uma célula para outra | copy.bf",
+        "titulo": "Copiar valor para a próxima célula | copy.bf",
         "texto": "Copia célula 0 para célula 1 (destrói o original)\n[>+<-]\n\nCopia célula 0 para célula 1 preservando o original (usa célula 2 como temp)\n[>+>+<<-]>>[<<+>>-]"
     },{
         "tipo": "code",

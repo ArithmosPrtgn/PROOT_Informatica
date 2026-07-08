@@ -22,7 +22,7 @@
     user-select: none;
     gap: 10px;
     width: max(25vw, 250px);
-    height: 3vh;
+    height: 15px;
     transition: all 0.3s ease;
 }
 
@@ -30,13 +30,13 @@
 
 #search {
     margin: -10px;
-    padding: 10px 5px;
+    padding: 10px;
     border-radius: 20px;
     background-color: var(--surfaceColor);
     color: var(nonAccentColor);
     border: none;
     width: max(23vw, 210px);
-    height: 3vh;
+    height: 100%;
     font-size: 1.25em;
     font-family: inherit; 
 }
