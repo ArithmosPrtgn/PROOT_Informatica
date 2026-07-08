@@ -9,13 +9,10 @@
         "texto": "Apesar de ser Turing-completa (ou seja, capaz de computar qualquer coisa computável), ela possui apenas <strong>8 comandos</strong>, todos representados por símbolos. Não é usada em produção, mas é muito popular como desafio intelectual e para estudo de teoria da computação."
     }, {
         "tipo": "callout",
-        "categoria": "affirmative",
+        "categoria": "yes",
         "titulo": "Características principais",
         "texto": "<ul><li>Apenas 8 comandos: + - > < . , [ ]</li><li>Opera sobre uma fita de células de memória</li><li>Cada célula armazena um número de 0 a 255 (bytes)</li><li>Turing-completa: pode calcular qualquer algoritmo</li><li>Qualquer caractere que não seja um dos 8 comandos é tratado como comentário</li></ul>"
-    }, {
-        "tipo": "p",
-        "texto": "Você pode adicionar mais conteúdo colocando outro objeto aqui dentro da lista <strong>conteudo</strong>, sempre separado por vírgula e antes do fechamento do colchete."
-        }
+    }
     ]
 }, {
     "nomeS": "Modelo de Memória",
@@ -34,7 +31,7 @@
     }
 ]
 }, {
-    "nomeSS": "Geral (C)",
+    "nomeSS": "Geral",
     "conteudo":[{
             "tipo": "p",
             "texto": "Brainfuck possui exatamente 8 comandos. Qualquer outro caractere no código é ignorado e pode ser usado como comentário."

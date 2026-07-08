@@ -330,7 +330,7 @@ footer {
     position: absolute;
         right: 5%;
         bottom: -40%;
-    font-size: 10rem !important;
+    font-size: 200px !important;
     pointer-events: none;
     user-select: none;
 }

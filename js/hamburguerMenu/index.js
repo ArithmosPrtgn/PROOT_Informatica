@@ -63,6 +63,11 @@ function closeHamburgerMenu() {
 	}
 }
 
+window.SUAEHamburgerMenu = {
+	close: closeHamburgerMenu,
+	open: openHamburgerMenu
+};
+
 async function initHamburgerTheme() {
 	const button = hamburgerMenuRoot?.querySelector('#themeComplex');
 	if (!button || button.dataset.themeBound === 'true') {
@@ -109,6 +114,8 @@ async function openHamburgerMenu() {
 		hamburgerMenuRoot.dataset.hamburgerMenuOverlay = 'true';
 		hamburgerMenuRoot.append(...overlayNodes);
 		document.body.append(hamburgerMenuRoot);
+
+		window.SUAEArticlePage?.decorateHamburgerMenu?.(hamburgerMenuRoot);
 
 		const hideContent = hamburgerMenuRoot.querySelector('#hideContent');
 		const settings = hamburgerMenuRoot.querySelector('#settings');
