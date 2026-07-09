@@ -122,12 +122,6 @@
         "texto": "<strong>Explore e interaja (Use as Stars!):</strong> Não use o GitHub apenas como um pendrive para o seu código. Navegue, busque projetos na sua linguagem favorita, dê <em>Stars</em> para salvar referências legais e leia como outros programadores resolvem problemas."
     }
     ]
-        },{
-        "nomeS": "Leitura Recomendada",
-        "conteudo": [{
-            "tipo":"p",
-            "texto": "<a href=\"https://esolangs.org/wiki/Brainfuck\">Esolangs Wiki — Brainfuck (referência completa)</a>\n<a href=\"https://pt.wikipedia.org/wiki/Brainfuck\">Wikipedia — Brainfuck (pt-br)</a>\n<a href=\"https://copy.sh/brainfuck/\">Interpretador online de Brainfuck</a>\n<a href=\"https://www.nayuki.io/page/brainfuck-interpreter-javascript\">Interpretador Brainfuck em JavaScript</a>"
-        }]
     }
 ]
 
