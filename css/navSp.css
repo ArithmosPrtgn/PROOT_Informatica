@@ -140,3 +140,73 @@ body.L .icoAniHB { font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "ops
 
     #search {font-size: 1em;}
 }
+
+#searchBox { position: relative; }
+
+#searchResults {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    width: max(25vw, 250px);
+    max-height: 50vh;
+    overflow-y: auto;
+    background-color: var(--surfaceColor);
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    z-index: 100;
+    transition: all 0.3s ease;
+}
+
+#searchResults.hidden { display: none; }
+
+.searchResultItem:last-child { border-bottom: none; }
+
+.searchResultItem:hover, .searchResultItem:focus {
+    background-color: var(--altAccentColor);
+}
+
+.searchResultLabel {
+    display: block;
+    font-size: 0.75em;
+    opacity: 0.7;
+    margin-bottom: 2px;
+    color: var(--invertedNonAccentColor);
+}
+
+.searchResultText {
+    display: block;
+    font-size: 0.95em;
+    color: var(--invertedNonAccentColor);
+}
+
+.searchResultText mark {
+    background-color: var(--accentColor);
+    color: var(--invertedNonAccentColor);
+    border-radius: 3px;
+    padding: 0 2px;
+}
+
+.searchNoResults {
+    padding: 14px;
+    text-align: center;
+    opacity: 0.6;
+    font-size: 0.9em;
+}
+
+.searchResultItem {
+    all: unset;
+    box-sizing: border-box;
+    width: 100%;
+    display: block;
+    padding: 10px 14px;
+    color: var(--nonAccentColor);
+    border-bottom: 1px solid rgba(128,128,128,0.15);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+    #searchResults {
+        width: calc(100vw - 32px);
+        right: -16px;
+    }
+}
