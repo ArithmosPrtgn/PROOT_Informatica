@@ -37,6 +37,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: var(--accentColor);
+    height: 99vh;
     height: 99dvh;
     z-index: 1002;
     width: max(25vw, calc(225px + 5vw));
@@ -66,7 +67,9 @@
     overflow-x: hidden;
 }
 
-#firstOneNAL {max-height: 60vh; margin: 0 0 20px 0;}
+
+#settings > * { min-height: 0; }
+#firstOneNAL {max-height: 45vh; margin: 0 0 20px 0;}
 
 .navigationArticleList > li, .navigationArticleList > details {
     font-family: "Google Sans Flex", sans-serif;

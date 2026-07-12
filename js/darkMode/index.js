@@ -20,9 +20,15 @@ function ensureThemeToggleHelper() {
 
 async function initTheme() {
   const btn = document.getElementById('theme');
-  if (!btn) return console.warn('Theme button not found');
 
   const themeToggle = await ensureThemeToggleHelper();
+
+	if (themeToggle.applySavedTheme) {
+		themeToggle.applySavedTheme();
+	}
+
+	if (!btn) return console.warn('Theme button not found');
+
   themeToggle.attach(btn);
 }
 

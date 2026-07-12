@@ -15,6 +15,16 @@
 		}
 	}
 
+	function applySavedTheme() {
+		const savedTheme = localStorage.getItem('CT');
+
+		if (savedTheme === 'L') {
+			document.body.classList.add('L');
+		} else {
+			document.body.classList.remove('L');
+		}
+	}
+
 	function attach(button) {
 		if (!button || button.dataset.themeBound === 'true') {
 			return;
@@ -63,5 +73,5 @@
 		});
 	}
 
-	window.SUAEThemeToggle = { attach };
+	window.SUAEThemeToggle = { attach, applySavedTheme };
 })();

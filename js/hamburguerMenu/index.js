@@ -68,6 +68,23 @@ window.SUAEHamburgerMenu = {
 	open: openHamburgerMenu
 };
 
+async function initGlobalTheme() {
+	if (window.__SUAEThemeApplied) {
+		return;
+	}
+	window.__SUAEThemeApplied = true;
+
+	try {
+		const themeToggle = await ensureThemeToggleHelper();
+		if (themeToggle.applySavedTheme) {
+			themeToggle.applySavedTheme();
+		}
+	} catch (error) {
+		console.error('Erro ao aplicar tema salvo:', error);
+		window.__SUAEThemeApplied = false;
+	}
+}
+
 async function initHamburgerTheme() {
 	const button = hamburgerMenuRoot?.querySelector('#themeComplex');
 	if (!button || button.dataset.themeBound === 'true') {
@@ -161,3 +178,6 @@ function initHamburgerMenu() {
 
 document.addEventListener('headerLoaded', initHamburgerMenu);
 document.addEventListener('DOMContentLoaded', initHamburgerMenu);
+
+document.addEventListener('headerLoaded', initGlobalTheme);
+document.addEventListener('DOMContentLoaded', initGlobalTheme);
