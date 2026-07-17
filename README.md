@@ -1,4 +1,4 @@
-# Leia-me antes de usar ou ver o SUAE
+# Leia-me antes de usar ou ver o PROOT Informática
 
 Esse projeto é da disciplina Projeto de Extensão I e II do ano de 2026 com os professores responsáveis sendo Lorena T Boechat e Marcos Celso Rodrigues
 
