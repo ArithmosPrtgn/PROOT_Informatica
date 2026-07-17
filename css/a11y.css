@@ -1,0 +1,30 @@
+#access {
+    width: 80vw;
+    min-width: 320px;
+    min-height: 70vh;
+    background-color: var(--accentColor);
+    border-radius: 50px;
+    padding: 30px;
+}
+
+#access > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.optionAccess, .optionAccess > div {
+    display: flex;
+    flex-direction: row;
+}
+
+.optionAccess { justify-content: space-between; width: 100%; margin: 10px 0}
+
+#access > div:first-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+

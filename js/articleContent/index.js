@@ -325,7 +325,7 @@ function setSelectedState(selectionName, selectionLabel) {
 		state.navTitle.textContent = state.structure?.tituloPrincipal || state.navTitle.textContent;
 	}
 
-	document.title = `${state.structure?.tituloPrincipal || 'SUAE'} - ${selectionLabel}`;
+	document.title = `${state.structure?.tituloPrincipal || 'PROOT'} - ${selectionLabel}`;
 
 	if (state.menuRoot) {
 		state.menuRoot.querySelectorAll('li[data-content-name]').forEach((item) => {
@@ -336,7 +336,7 @@ function setSelectedState(selectionName, selectionLabel) {
 
 		const currentSession = state.menuRoot.querySelector('#settings > div > h4');
 		if (currentSession) {
-			currentSession.textContent = `${state.structure?.tituloPrincipal || 'SUAE'} / ${selectionLabel}`;
+			currentSession.textContent = `${state.structure?.tituloPrincipal || 'PROOT'} / ${selectionLabel}`;
 		}
 	}
 }
@@ -459,7 +459,7 @@ function decorateNavigationMenu(root) {
 		const parentName = clickedItem.dataset.parentName;
 		const displayLabel = parentName ? `${parentName} / ${contentName}` : contentName;
 		renderSelectionByPath(contentName, displayLabel);
-		window.SUAEHamburgerMenu?.close?.();
+		window.PROOTHamburgerMenu?.close?.();
 	});
 
 	generatedList.addEventListener('keydown', (event) => {
@@ -477,7 +477,7 @@ function decorateNavigationMenu(root) {
 		const parentName = clickedItem.dataset.parentName;
 		const displayLabel = parentName ? `${parentName} / ${contentName}` : contentName;
 		renderSelectionByPath(contentName, displayLabel);
-		window.SUAEHamburgerMenu?.close?.();
+		window.PROOTHamburgerMenu?.close?.();
 	});
 }
 
@@ -497,7 +497,7 @@ function applyStructureToNav() {
 		state.navSubtitle.textContent = initialLabel;
 	}
 
-	document.title = `${state.structure?.tituloPrincipal || 'SUAE'} - ${initialLabel}`;
+	document.title = `${state.structure?.tituloPrincipal || 'PROOT'} - ${initialLabel}`;
 
 	if (state.navIcon && state.structure) {
 		const iconNode = state.navIcon;
@@ -557,7 +557,7 @@ async function initArticlePage() {
 
 	try {
 		await loadArticleData();
-		window.SUAEArticlePage = {
+		window.PROOTArticlePage = {
 			decorateHamburgerMenu: decorateNavigationMenu,
 			renderSelection: renderSelectionByPath,
 			getState: () => state

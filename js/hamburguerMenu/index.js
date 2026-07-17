@@ -6,39 +6,39 @@ const themeToggleHelperUrl = '/js/darkMode/themeToggle.js';
 const saveAsHelperUrl = '/js/saveAs/index.js';
 
 function ensureThemeToggleHelper() {
-	if (window.SUAEThemeToggle) {
-		return Promise.resolve(window.SUAEThemeToggle);
+	if (window.PROOTThemeToggle) {
+		return Promise.resolve(window.PROOTThemeToggle);
 	}
 
-	if (!window.__SUAEThemeTogglePromise) {
-		window.__SUAEThemeTogglePromise = new Promise((resolve, reject) => {
+	if (!window.__PROOTThemeTogglePromise) {
+		window.__PROOTThemeTogglePromise = new Promise((resolve, reject) => {
 			const script = document.createElement('script');
 			script.src = themeToggleHelperUrl;
-			script.onload = () => resolve(window.SUAEThemeToggle);
+			script.onload = () => resolve(window.PROOTThemeToggle);
 			script.onerror = () => reject(new Error('Theme toggle helper failed to load'));
 			document.head.append(script);
 		});
 	}
 
-	return window.__SUAEThemeTogglePromise;
+	return window.__PROOTThemeTogglePromise;
 }
 
 function ensureSaveAsHelper() {
-	if (window.SUAESaveAs) {
-		return Promise.resolve(window.SUAESaveAs);
+	if (window.PROOTSaveAs) {
+		return Promise.resolve(window.PROOTSaveAs);
 	}
 
-	if (!window.__SUAESaveAsPromise) {
-		window.__SUAESaveAsPromise = new Promise((resolve, reject) => {
+	if (!window.__PROOTSaveAsPromise) {
+		window.__PROOTSaveAsPromise = new Promise((resolve, reject) => {
 			const script = document.createElement('script');
 			script.src = saveAsHelperUrl;
-			script.onload = () => resolve(window.SUAESaveAs);
+			script.onload = () => resolve(window.PROOTSaveAs);
 			script.onerror = () => reject(new Error('Save-as helper failed to load'));
 			document.head.append(script);
 		});
 	}
 
-	return window.__SUAESaveAsPromise;
+	return window.__PROOTSaveAsPromise;
 }
 
 function closeHamburgerMenu() {
@@ -63,16 +63,16 @@ function closeHamburgerMenu() {
 	}
 }
 
-window.SUAEHamburgerMenu = {
+window.PROOTHamburgerMenu = {
 	close: closeHamburgerMenu,
 	open: openHamburgerMenu
 };
 
 async function initGlobalTheme() {
-	if (window.__SUAEThemeApplied) {
+	if (window.__PROOTThemeApplied) {
 		return;
 	}
-	window.__SUAEThemeApplied = true;
+	window.__PROOTThemeApplied = true;
 
 	try {
 		const themeToggle = await ensureThemeToggleHelper();
@@ -81,7 +81,7 @@ async function initGlobalTheme() {
 		}
 	} catch (error) {
 		console.error('Erro ao aplicar tema salvo:', error);
-		window.__SUAEThemeApplied = false;
+		window.__PROOTThemeApplied = false;
 	}
 }
 
@@ -132,7 +132,7 @@ async function openHamburgerMenu() {
 		hamburgerMenuRoot.append(...overlayNodes);
 		document.body.append(hamburgerMenuRoot);
 
-		window.SUAEArticlePage?.decorateHamburgerMenu?.(hamburgerMenuRoot);
+		window.PROOTArticlePage?.decorateHamburgerMenu?.(hamburgerMenuRoot);
 
 		const hideContent = hamburgerMenuRoot.querySelector('#hideContent');
 		const settings = hamburgerMenuRoot.querySelector('#settings');

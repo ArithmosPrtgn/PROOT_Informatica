@@ -1,21 +1,21 @@
 const themeToggleHelperUrl = '/js/darkMode/themeToggle.js';
 
 function ensureThemeToggleHelper() {
-  if (window.SUAEThemeToggle) {
-    return Promise.resolve(window.SUAEThemeToggle);
+  if (window.PROOTThemeToggle) {
+    return Promise.resolve(window.PROOTThemeToggle);
   }
 
-  if (!window.__SUAEThemeTogglePromise) {
-    window.__SUAEThemeTogglePromise = new Promise((resolve, reject) => {
+  if (!window.__PROOTThemeTogglePromise) {
+    window.__PROOTThemeTogglePromise = new Promise((resolve, reject) => {
       const script = document.createElement('script');
       script.src = themeToggleHelperUrl;
-      script.onload = () => resolve(window.SUAEThemeToggle);
+      script.onload = () => resolve(window.PROOTThemeToggle);
       script.onerror = () => reject(new Error('Theme toggle helper failed to load'));
       document.head.append(script);
     });
   }
 
-  return window.__SUAEThemeTogglePromise;
+  return window.__PROOTThemeTogglePromise;
 }
 
 async function initTheme() {

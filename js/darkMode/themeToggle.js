@@ -1,5 +1,5 @@
 (function () {
-	if (window.SUAEThemeToggle) {
+	if (window.PROOTThemeToggle) {
 		return;
 	}
 
@@ -73,5 +73,5 @@
 		});
 	}
 
-	window.SUAEThemeToggle = { attach, applySavedTheme };
+	window.PROOTThemeToggle = { attach, applySavedTheme };
 })();
