@@ -1,5 +1,4 @@
-const scriptElement = document.currentScript;
-const sourceFolder = scriptElement?.dataset.sourceFolder || '/';
+const sourceFolder = window.PROOTPage?.sourceFolder || '/';
 const sourceFolderUrl = new URL(sourceFolder.endsWith('/') ? sourceFolder : `${sourceFolder}/`, document.baseURI);
 const structureUrl = new URL('estrutura.json', sourceFolderUrl);
 const contentUrl = new URL('conteudo.json', sourceFolderUrl);
@@ -551,7 +550,7 @@ async function loadArticleData() {
 
 async function initArticlePage() {
 	state.mainArea = document.getElementById('mainArea');
-	if (!state.mainArea) {
+	if (!state.mainArea || !window.PROOTPage?.sourceFolder) {
 		return;
 	}
 

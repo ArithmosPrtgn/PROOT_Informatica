@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "description": "Esse projeto é da disciplina Projeto de Extensão I e II do ano de 2026 com os professores responsáveis sendo Lorena T Boechat e Marcos Celso Rodrigues",
   "main": "index.js",
-  "scripts": { "build": "eleventy", "serve": "eleventy --serve" },
+  "scripts": {
+    "serve": "eleventy --serve",
+    "build:assets": "esbuild js/entry.js --bundle --minify --outfile=js/bundle.js && esbuild css/entry.css --bundle --minify --outfile=css/bundle.css",
+    "build": "npm run build:assets && eleventy",
+    "watch:assets": "esbuild js/entry.js --bundle --outfile=js/bundle.js --watch & esbuild css/entry.css --bundle --outfile=css/bundle.css --watch"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ArithmosPrtgn/SUAE_Informatica.git"
@@ -17,6 +22,7 @@
   },
   "homepage": "https://github.com/ArithmosPrtgn/SUAE_Informatica#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.6"
+    "@11ty/eleventy": "^3.1.6",
+    "esbuild": "^0.28.1"
   }
 }
