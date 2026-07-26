@@ -1,0 +1,62 @@
+#errorscenary {
+    width: 50vh;
+    height: 50vh;
+    max-height: 1000px;
+    max-width: 1000px;
+    margin: 30px 0;
+}
+
+#errorOptions {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#errorAltButtons {
+    position: sticky;
+        top: 1%;
+        right: 5%;
+    margin: 20px 0 0 0;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    background-color: var(--accentColor);
+    border-radius: 15px;
+    padding: 10px 20px;
+}
+
+#errorAltButtons > button {
+    margin: 0 10px;
+}
+
+#errorContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+#errorContent > h4 {
+    text-align: left;
+}
+
+#errorWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+#errorTitle {
+    margin: 20px 0 0 0;
+    text-align: center;
+}
+
+@media screen and (max-width: 750px) {
+    #errorWrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #errorscenary { margin: 0; }
+}

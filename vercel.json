@@ -1,3 +1,7 @@
 {
-	"outputDirectory": "dist"
+	"outputDirectory": "dist",
+	"routes": [
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "status": 404, "dest": "/err/http/404.html" }
+  ]
 }

@@ -11,8 +11,6 @@ import './a11y/index.js';
 import './a11y/textSize/index.js';
 import './anim/detailsOpenClose.js'
 import './anim/detailsOpenCloseHeader.js'
-import './darkMode/forNavSp.js';
-import './darkMode/index.js'
 import './darkMode/themeToggle.js';
 import './saveAs/index.js';
 import './search/index.js';

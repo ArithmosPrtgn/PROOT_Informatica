@@ -35,9 +35,9 @@ function getSavedAnimations() {
 
 function applyAnimations(enabled) {
 	if (!enabled) {
-		document.body.classList.add('a11y-no-animations');
+		document.documentElement.classList.add('a11y-no-animations');
 	} else {
-		document.body.classList.remove('a11y-no-animations');
+		document.documentElement.classList.remove('a11y-no-animations');
 	}
 }
 
@@ -57,9 +57,9 @@ function getSavedHighContrast() {
 
 function applyHighContrast(enabled) {
 	if (enabled) {
-		document.body.classList.add('a11y-high-contrast');
+		document.documentElement.classList.add('a11y-high-contrast');
 	} else {
-		document.body.classList.remove('a11y-high-contrast');
+		document.documentElement.classList.remove('a11y-high-contrast');
 	}
 }
 

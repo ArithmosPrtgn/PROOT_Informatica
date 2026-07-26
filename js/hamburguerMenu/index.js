@@ -78,31 +78,23 @@ window.PROOTHamburgerMenu = {
 	open: openHamburgerMenu
 };
 
-async function initGlobalTheme() {
-	if (window.__PROOTThemeApplied) {
-		return;
-	}
-	window.__PROOTThemeApplied = true;
+const THEME_BUTTON_SELECTOR = '#theme, #themeComplex';
 
+async function bindThemeButtons(root = document) {
 	try {
 		const themeToggle = await ensureThemeToggleHelper();
-		if (themeToggle.applySavedTheme) {
+
+		if (!window.__PROOTThemeApplied && themeToggle.applySavedTheme) {
+			window.__PROOTThemeApplied = true;
 			themeToggle.applySavedTheme();
 		}
+
+		const buttons = root.querySelectorAll(THEME_BUTTON_SELECTOR);
+		buttons.forEach((button) => themeToggle.attach(button));
 	} catch (error) {
-		console.error('Erro ao aplicar tema salvo:', error);
+		console.error('Erro ao inicializar o alternador de tema:', error);
 		window.__PROOTThemeApplied = false;
 	}
-}
-
-async function initHamburgerTheme() {
-	const button = hamburgerMenuRoot?.querySelector('#themeComplex');
-	if (!button || button.dataset.themeBound === 'true') {
-		return;
-	}
-
-	const themeToggle = await ensureThemeToggleHelper();
-	themeToggle.attach(button);
 }
 
 async function initHamburgerSaveAs() {
@@ -166,7 +158,7 @@ async function openHamburgerMenu() {
 			closeButton.addEventListener('click', closeHamburgerMenu, { once: true });
 		}
 
-		initHamburgerTheme();
+		bindThemeButtons(hamburgerMenuRoot);
 		initHamburgerSaveAs();
 	} catch (error) {
 		console.error('Erro ao abrir hamburguer menu:', error);
@@ -189,5 +181,5 @@ function initHamburgerMenu() {
 document.addEventListener('headerLoaded', initHamburgerMenu);
 document.addEventListener('DOMContentLoaded', initHamburgerMenu);
 
-document.addEventListener('headerLoaded', initGlobalTheme);
-document.addEventListener('DOMContentLoaded', initGlobalTheme);
+document.addEventListener('headerLoaded', () => bindThemeButtons());
+document.addEventListener('DOMContentLoaded', () => bindThemeButtons());
