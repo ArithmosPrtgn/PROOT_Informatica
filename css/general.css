@@ -11,12 +11,15 @@
 }
 
 :root.a11y-high-contrast button,
+:root.a11y-high-contrast .fakeButton,
 :root.a11y-high-contrast input,
 :root.a11y-high-contrast select {
     outline: 2px solid var(--nonAccentColor) !important;
 }
 
-h1, h2, h3, h4, h5, h6,label, input, button { 
+.fakeButton { text-decoration: none; }
+
+h1, h2, h3, h4, h5, h6,label, input, button, .fakeButton { 
     color: var(--invertedNonAccentColor);
     white-space: normal;
     overflow-wrap: break-word;
@@ -179,12 +182,14 @@ body, html {
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, fill 0.3s ease;
 }
 
-button {
+button, .fakeButton {
     display: flex;
     justify-content: center;
     align-items: center;
     width: auto;
     height: auto;
+    min-width: 0;
+    max-width: 100%;
     font-family: inherit;
     background: transparent;
     border: 2px solid var(--invertedNonAccentColor);
@@ -198,17 +203,19 @@ button {
 
 a { color: var(--invertedNonAccentColor); }
 
-button:hover {
+button:hover, .fakeButton:hover {
     box-shadow: 0px 0px 0px 5px var(--invertedNonAccentColor);
     transform: scale(0.9);
     transition: 0.3s;
 }
 
-button:active {
+button:active, .fakeButton:active {
     box-shadow: 0 0 0 15px var(--invertedNonAccentColor);
     transform: translateY(0) scale(0.75);
     transition: 0.3s;
 }
+
+#CTAButton { background-color: var(--accentColor); }
 
 .iconM { 
     color: var(--invertedNonAccentColor); 

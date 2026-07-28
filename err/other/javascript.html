@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bundle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/resources/favicon.svg" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>PROOT - NoJS</title>
+</head>
+<body>
+    <h1 id="errorTitle">Erro do usuário: Javascript</h1>
+    <div id="mainArea">
+        <script> window.location.replace("/"); </script>
+
+        <div id="errorWrapper">
+            <img id="errorscenary" src="/resources/err/NoJS.webp" alt="Ícone desenhado do Javascript: Um quadrado amarelo, bordas pequenas e pretas, com o texto 'JS' escrito no canto inferior esquerdo. No lado oposto, o símbolo '!?', em vermelho, é mostrado." />
+                <div id="errorContent">
+                <h2>O site depende de scripts para funcionar.</h2>
+                <h4>Por algum motivo, o seu navegador não permitiu o uso de Javascript pelo website. Verifique se a permissão nescessária, "Javascript", está definida como "Permitir" para o nosso site. Se necessário, use outro navegador. <br>
+                    Tem certeza que o problema não é do seu lado?: <a href="https://github.com/ArithmosPrtgn/PROOT_Informatica/issues">Crie um <i>issue</i> no Github.</a></h4>
+                <div id="errorOptions">
+                    <a class="fakeButton" href="/"><span class="material-symbols-rounded iconM iconMNeedsSpace">home</span>Tentar voltar para a página inicial</a>
+                    <a class="fakeButton" href=""><span class="material-symbols-rounded iconM iconMNeedsSpace">refresh</span>Recarregar</a>
+                    <a class="fakeButton" id="CTAButton" href="https://www.wikihow.com/Enable-JavaScript"><span class="material-symbols-rounded iconM iconMNeedsSpace">open_in_new</span>Como resolver?</a>
+                </div>
+            </div>
+        </div>
+        <div id="errorAltButtons">
+            <button>Botões de experiência estão inativos pela ausência do script nescessário.</button>
+        </div>
+    </div>
+</body>
+</html>
