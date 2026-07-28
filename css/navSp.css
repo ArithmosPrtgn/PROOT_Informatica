@@ -33,7 +33,7 @@
     padding: 10px;
     border-radius: 20px;
     background-color: var(--surfaceColor);
-    color: var(nonAccentColor);
+    color: var(--nonAccentColor);
     border: none;
     width: max(23vw, 210px);
     height: 100%;

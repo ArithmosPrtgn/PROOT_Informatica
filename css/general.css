@@ -466,7 +466,7 @@ table {
 tr > th {
     font-family: 'Cal Sans', sans-serif;
     background-color: var(--altAccentColor);
-    border-bottom: 5px var(--nonAccentColor);
+    border-bottom: 5px solid var(--nonAccentColor);
     color: var(--nonAccentColor);
     padding: 10px 5px;
 }
