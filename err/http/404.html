@@ -15,18 +15,19 @@
 </head>
 <body>
     <script src="/js/bundle.js" defer></script>
+    <noscript><meta http-equiv="refresh" content="0 url=/err/other/javascript.html"></noscript>
     <h1 id="errorTitle">Erro 404</h1>
     <div id="mainArea">
 
         <div id="errorWrapper">
-            <img id="errorscenary" src="/resources/err/404.png" alt="Ícone de erro 404: o mascote do site aponta para o canto superior esquerdo, apresentando um sublinhado de ficheiro ao fundo; '404' é escrito dentro deste." />
+            <img id="errorscenary" src="/resources/err/404.webp" alt="Ícone de erro 404: o mascote do site aponta para o canto superior esquerdo, apresentando um sublinhado de ficheiro ao fundo; '404' é escrito dentro deste." />
                 <div id="errorContent">
                 <h2>A página alvo não existe.</h2>
                 <h4>Você pode ter digitado o link errado, tentado acessar uma página que foi removida ou alterada, ou até mesmo ter sido redirecionado incorretamente por um botão.<br>
                 Se você identificar que este erro não deveria ter acontecido, <a href="https://github.com/ArithmosPrtgn/PROOT_Informatica/issues">crie um <i>issue</i> no Github.</a></h4>
                 <div id="errorOptions">
                     <button onclick="window.history.back()"><span class="material-symbols-rounded iconM iconMNeedsSpace">arrow_back</span>Página anterior</button>
-                    <button onclick="window.location.href='/'"><span class="material-symbols-rounded iconM iconMNeedsSpace">home</span>Ir para a página inicial</button>
+                    <button id="CTAButton" onclick="window.location.href='/'"><span class="material-symbols-rounded iconM iconMNeedsSpace">home</span>Ir para a página inicial</button>
                 </div>
             </div>
         </div>

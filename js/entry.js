@@ -1,6 +1,4 @@
-import './partFetch/fetchNavSp.js';
 import './partFetch/fetchNav.js';
-import './partFetch/fetchNavSobre.js';
 import './partFetch/fetchFooter.js';
 import './articleContent/index.js';
 import './hamburguerMenu/index.js';

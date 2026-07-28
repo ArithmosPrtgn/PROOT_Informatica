@@ -1,10 +1,21 @@
-document.addEventListener("DOMContentLoaded", async () => {
-  const mountPoint = document.getElementById("NavS");
+document.addEventListener("DOMContentLoaded", () => {
+  const NAV_CONFIG = [
+    { mountId: "NavS",   src: "/sitewide/nav/nav.html" },
+    { mountId: "NavO",   src: "/sitewide/nav/nav.html" },
+    { mountId: "NavLoL", src: "/sitewide/nav/navSp.html" },
+  ];
 
-  if (!mountPoint) { return;}
+  const config = NAV_CONFIG.find(({ mountId }) => document.getElementById(mountId));
+  if (!config) return;
+
+  loadNav(config.mountId, config.src);
+});
+
+async function loadNav(mountId, src) {
+  const mountPoint = document.getElementById(mountId);
 
   try {
-    const res = await fetch("/sitewide/nav/nav.html");
+    const res = await fetch(src);
 
     if (!res.ok) {
       throw new Error(`Erro ao fetchar nav: ${res.status}`);
@@ -23,4 +34,4 @@ document.addEventListener("DOMContentLoaded", async () => {
   } catch (error) {
     console.error("Erro ao carregar nav:", error);
   }
-});
+}
