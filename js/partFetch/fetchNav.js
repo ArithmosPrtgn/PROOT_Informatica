@@ -1,26 +1,9 @@
-document.addEventListener("DOMContentLoaded", async () => {
-  const mountPoint = document.getElementById("NavS");
+/**
+ * Carrega a navbar padrão (/sitewide/nav/nav.html) no ponto de montagem #NavS.
+ * Usa o helper genérico loadComponent para evitar duplicação de código.
+ */
+import loadComponent from './loadComponent.js';
 
-  if (!mountPoint) { return;}
-
-  try {
-    const res = await fetch("/sitewide/nav/nav.html");
-
-    if (!res.ok) {
-      throw new Error(`Erro ao fetchar nav: ${res.status}`);
-    }
-
-    const data = await res.text();
-    const parsed = new DOMParser().parseFromString(data, "text/html");
-    const navElements = Array.from(parsed.body?.children ?? []);
-
-    if (navElements.length === 0) {
-      throw new Error("Cadê o <nav>?");
-    }
-
-    mountPoint.replaceWith(...navElements);
-    document.dispatchEvent(new Event("headerLoaded"));
-  } catch (error) {
-    console.error("Erro ao carregar nav:", error);
-  }
+document.addEventListener('DOMContentLoaded', () => {
+	loadComponent('NavS', '/sitewide/nav/nav.html', 'headerLoaded');
 });
