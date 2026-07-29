@@ -562,12 +562,31 @@ async function loadArticleData() {
 	state.selectedLabel = state.selectedName;
 }
 
+// Matches paths shaped like /folder1/folder2/item.html (exactly two folder
+// segments followed by a file with an extension).
 const ARTICLE_PATH_PATTERN = /^\/[^/]+\/[^/]+\/[^/]+\.[a-zA-Z0-9]+$/;
+
+// Roots that are never content pages, even when they happen to match the
+// two-folder shape above (e.g. /err/http/foo.html, /err/other/foo.html,
+// /sobre/foo.html all look like /folder1/folder2/item.html but aren't).
+const NON_ARTICLE_PREFIXES = ['/err/', '/sobre/'];
+
+function isArticlePath(path) {
+	if (path === '/' || path === '/index.html' || path === '/sobre' || path === '/err') {
+		return false;
+	}
+
+	if (NON_ARTICLE_PREFIXES.some((prefix) => path.startsWith(prefix))) {
+		return false;
+	}
+
+	return ARTICLE_PATH_PATTERN.test(path);
+}
 
 async function initArticlePage() {
 	const currentPath = window.location.pathname;
 
-	if (!ARTICLE_PATH_PATTERN.test(currentPath)) { return; }
+	if (!isArticlePath(currentPath)) { return; }
 
 	state.mainArea = document.getElementById('mainArea');
 	if (!state.mainArea || !window.PROOTPage?.sourceFolder) {
