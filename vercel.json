@@ -1,51 +1,15 @@
 {
-	"outputDirectory": "dist",
-  "rewrites": [
-    { "source": "/:category/:item/index:page.html", "destination": "/templates/article.html" }
-  ],
-	"routes": [
+  "outputDirectory": "dist",
+  "routes": [
+    { "src": "^/([^/]+)/([^/]+)/index[^/]+\\.html$", "dest": "/templates/article.html" },
+
+    { "src": "^/resources/ico/c/(.*)$", "headers": { "Cache-Control": "public, max-age=31536000, immutable" }, "continue": true },
+    { "src": "^/(.*)\\.svg$", "headers": { "Cache-Control": "public, max-age=31536000, immutable" }, "continue": true },
+    { "src": "^/js/bundle\\.js$", "headers": { "Cache-Control": "public, max-age=0, must-revalidate" }, "continue": true },
+    { "src": "^/css/bundle\\.css$", "headers": { "Cache-Control": "public, max-age=31536000, immutable" }, "continue": true },
+    { "src": "^/resources/ico-sprite\\.svg$", "headers": { "Cache-Control": "public, max-age=31536000, immutable" }, "continue": true },
+
     { "handle": "filesystem" },
     { "src": "/(.*)", "status": 404, "dest": "/err/http/404.html" }
-  ],
-  "headers": [
-    {
-      "source": "/resources/ico/c/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    },
-    {
-      "source": "/(.*).svg",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    },
-    {
-      "source": "/js/bundle.js",
-      "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
-      ]
-    },
-    {
-      "source": "/css/bundle.css",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    },
-    {
-    "source": "/resources/ico-sprite.svg",
-    "headers": [
-      { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
-    ]
-  }
   ]
 }
