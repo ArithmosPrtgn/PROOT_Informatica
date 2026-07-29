@@ -3,6 +3,7 @@
  * Importa módulos essenciais: navegação, conteúdo, animações,
  * acessibilidade, tema escuro e busca.
  */
+import { injectSpeedInsights } from '@vercel/speed-insights';
 import './partFetch/fetchNavSp.js';
 import './articleContent/index.js';
 import './hamburguerMenu/index.js';
@@ -14,3 +15,6 @@ import './a11y/index.js';
 import './a11y/textSize/index.js';
 import './darkMode/themeToggle.js';
 import './saveAs/index.js';
+
+// Initialize Vercel Speed Insights
+injectSpeedInsights();
