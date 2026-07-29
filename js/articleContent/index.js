@@ -1,4 +1,4 @@
-const sourceFolder = window.PROOTPage?.sourceFolder || '/';
+const sourceFolder = window.PROOTPage?.sourceFolder	|| window.location.pathname.replace(/\/[^/]*$/, '/');
 const sourceFolderUrl = new URL(sourceFolder.endsWith('/') ? sourceFolder : `${sourceFolder}/`, document.baseURI);
 const structureUrl = new URL('estrutura.json', sourceFolderUrl);
 const contentUrl = new URL('conteudo.json', sourceFolderUrl);
