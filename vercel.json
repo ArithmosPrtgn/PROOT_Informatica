@@ -1,7 +1,7 @@
 {
   "outputDirectory": "dist",
   "routes": [
-    { "src": "^/([^/]+)/([^/]+)/index[^/]+\\.html$", "dest": "/template/article.html" },
+    { "src": "^/([^/]+)/([^/]+)/index[^/]+\\.html$", "dest": "/sitewide/articleTemplate.html" },
 
     { "src": "^/resources/ico/c/(.*)$", "headers": { "Cache-Control": "public, max-age=31536000, immutable" }, "continue": true },
     { "src": "^/(.*)\\.svg$", "headers": { "Cache-Control": "public, max-age=31536000, immutable" }, "continue": true },
