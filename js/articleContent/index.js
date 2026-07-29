@@ -589,7 +589,7 @@ async function initArticlePage() {
 	if (!isArticlePath(currentPath)) { return; }
 
 	state.mainArea = document.getElementById('mainArea');
-	if (!state.mainArea || !window.PROOTPage?.sourceFolder) {
+	if (!state.mainArea || !sourceFolder) {
 		return;
 	}
 
