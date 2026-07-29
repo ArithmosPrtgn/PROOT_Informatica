@@ -1,5 +1,8 @@
 {
 	"outputDirectory": "dist",
+  "rewrites": [
+    { "source": "/:category/:item/index:page.html", "destination": "/templates/article.html" }
+  ],
 	"routes": [
     { "handle": "filesystem" },
     { "src": "/(.*)", "status": 404, "dest": "/err/http/404.html" }
