@@ -562,17 +562,12 @@ async function loadArticleData() {
 	state.selectedLabel = state.selectedName;
 }
 
+const ARTICLE_PATH_PATTERN = /^\/[^/]+\/[^/]+\/[^/]+\.[a-zA-Z0-9]+$/;
+
 async function initArticlePage() {
-const currentPath = window.location.pathname;
-	
-	if (
-		currentPath === '/index.html' || 
-		currentPath === '/' || 
-		currentPath.startsWith('/sobre/') || 
-		currentPath === '/sobre' ||
-		currentPath.startsWith('/err/') || 
-		currentPath === '/err'
-	) { return; }
+	const currentPath = window.location.pathname;
+
+	if (!ARTICLE_PATH_PATTERN.test(currentPath)) { return; }
 
 	state.mainArea = document.getElementById('mainArea');
 	if (!state.mainArea || !window.PROOTPage?.sourceFolder) {
