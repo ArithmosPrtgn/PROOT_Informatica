@@ -10,6 +10,7 @@ export default function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy('linguagens');
 	eleventyConfig.addPassthroughCopy('sistemasOperacionais');
 	eleventyConfig.addPassthroughCopy('sobre');
+	eleventyConfig.addPassthroughCopy('hardware');
 	eleventyConfig.addPassthroughCopy('sitewide');
 	eleventyConfig.addPassthroughCopy('err');
 
