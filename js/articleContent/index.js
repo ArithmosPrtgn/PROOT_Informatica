@@ -563,6 +563,17 @@ async function loadArticleData() {
 }
 
 async function initArticlePage() {
+const currentPath = window.location.pathname;
+	
+	if (
+		currentPath === '/index.html' || 
+		currentPath === '/' || 
+		currentPath.startsWith('/sobre/') || 
+		currentPath === '/sobre' ||
+		currentPath.startsWith('/err/') || 
+		currentPath === '/err'
+	) { return; }
+
 	state.mainArea = document.getElementById('mainArea');
 	if (!state.mainArea || !window.PROOTPage?.sourceFolder) {
 		return;
