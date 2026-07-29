@@ -498,34 +498,48 @@ function applyStructureToNav() {
 
 	document.title = `${state.structure?.tituloPrincipal || 'PROOT'} - ${initialLabel}`;
 
-	if (state.navIcon && state.structure) {
-		const iconNode = state.navIcon;
+if (state.navIcon && state.structure) {
+	const iconNode = state.navIcon;
 
-		if (state.structure.iconeLoc) {
-			if (iconNode.tagName.toLowerCase() === 'img') {
-				iconNode.setAttribute('src', state.structure.iconeLoc);
-			} else {
-				const replacement = document.createElement('img');
-				replacement.id = iconNode.id || 'favicon';
-				replacement.className = iconNode.className || '';
-				replacement.setAttribute('src', state.structure.iconeLoc);
-				replacement.setAttribute('alt', `Ícone de ${state.structure.tituloPrincipal}`);
-				iconNode.replaceWith(replacement);
-				state.navIcon = replacement;
+	if (state.structure.iconeLoc) {
+		const symbolId = state.structure.iconeLoc.split('/').pop().replace(/\.svg$/i, '');
+		const altText = `Ícone de ${state.structure.tituloPrincipal}`;
+
+		if (iconNode.tagName.toLowerCase() === 'svg') {
+			let use = iconNode.querySelector('use');
+			if (!use) {
+				use = document.createElementNS('http://www.w3.org/2000/svg', 'use');
+				iconNode.append(use);
 			}
-		} else if (state.structure.icone) {
-			const parsedIcon = new DOMParser().parseFromString(state.structure.icone, 'image/svg+xml').querySelector('svg');
-			if (parsedIcon) {
-				parsedIcon.id = iconNode.id || 'favicon';
-				const combinedClasses = new Set((`${iconNode.className || ''} ${parsedIcon.className?.baseVal || ''} ${parsedIcon.getAttribute('class') || ''}`).split(/\s+/).filter(Boolean));
-				if (combinedClasses.size > 0) {
-					parsedIcon.setAttribute('class', Array.from(combinedClasses).join(' '));
-				}
-				iconNode.replaceWith(parsedIcon);
-				state.navIcon = parsedIcon;
+			use.setAttribute('href', `/resources/ico-sprite.svg#${symbolId}`);
+			iconNode.setAttribute('aria-label', altText);
+		} else {
+			const replacement = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+			replacement.id = iconNode.id || 'favicon';
+			replacement.setAttribute('class', iconNode.className || '');
+			replacement.setAttribute('role', 'img');
+			replacement.setAttribute('aria-label', altText);
+
+			const use = document.createElementNS('http://www.w3.org/2000/svg', 'use');
+			use.setAttribute('href', `/resources/ico-sprite.svg#${symbolId}`);
+			replacement.append(use);
+
+			iconNode.replaceWith(replacement);
+			state.navIcon = replacement;
+		}
+	} else if (state.structure.icone) {
+		const parsedIcon = new DOMParser().parseFromString(state.structure.icone, 'image/svg+xml').querySelector('svg');
+		if (parsedIcon) {
+			parsedIcon.id = iconNode.id || 'favicon';
+			const combinedClasses = new Set((`${iconNode.className || ''} ${parsedIcon.className?.baseVal || ''} ${parsedIcon.getAttribute('class') || ''}`).split(/\s+/).filter(Boolean));
+			if (combinedClasses.size > 0) {
+				parsedIcon.setAttribute('class', Array.from(combinedClasses).join(' '));
 			}
+			iconNode.replaceWith(parsedIcon);
+			state.navIcon = parsedIcon;
 		}
 	}
+}
 }
 
 async function loadArticleData() {
