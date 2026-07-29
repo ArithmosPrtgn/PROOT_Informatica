@@ -1,8 +1,6 @@
 export default function (eleventyConfig) {
 	eleventyConfig.setTemplateFormats(['html', 'njk']);
 
-	eleventyConfig.htmlTemplateEngine = false;
-
 	eleventyConfig.addPassthroughCopy('css');
 	eleventyConfig.addPassthroughCopy('js');
 	eleventyConfig.addPassthroughCopy('resources');
