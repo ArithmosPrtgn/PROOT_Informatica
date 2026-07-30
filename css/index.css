@@ -38,12 +38,9 @@
     transition: 0.3s;
 }
 
-.linkMe img, .linkMe svg {
+.techIcon {
     width: clamp(48px, 6vw, 80px);
     height: clamp(48px, 6vw, 80px);
-}
-
-.linkMe svg {
     display: block;
     color: var(--invertedNonAccentColor);
     transition: 0.3s;
