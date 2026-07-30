@@ -38,7 +38,7 @@
     transition: 0.3s;
 }
 
-.linkMe svg {
+.linkMe svg, .linkMe img {
     width: clamp(48px, 6vw, 80px);
     height: clamp(48px, 6vw, 80px);
     display: block;
