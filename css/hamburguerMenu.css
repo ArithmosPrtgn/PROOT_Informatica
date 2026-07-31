@@ -110,7 +110,7 @@
     background-color: var(--invertedNonAccentColor);
 }
 
-details.detailsForHeader { padding: 0;}
+details.detailsForHeader { padding: 0; width: 100%;}
 
 
 .detailsForHeader > summary {
