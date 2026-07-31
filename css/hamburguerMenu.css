@@ -184,6 +184,7 @@ details.is-closing .detailsForHeader-body {
 @media screen and (max-width: 720px) {
     #pcWrapper {
         flex-direction: column;
+        align-items: center;
     }
 
     .navigationArticleList { width: 90vw; max-width: none; }
