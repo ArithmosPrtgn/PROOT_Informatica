@@ -186,5 +186,7 @@ details.is-closing .detailsForHeader-body {
         flex-direction: column;
     }
 
-    .navigationArticleList { width: 90vw;}
+    .navigationArticleList { width: 90vw; max-width: none; }
+
+    #pcWrapper > #mainArea { width: 95vw;}
 }
