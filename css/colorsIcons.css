@@ -93,7 +93,8 @@
 }
 
 /*Acessibilidade Alto Contraste*/
-body.a11y-high-contrast {
+html.a11y-high-contrast.a11y-high-contrast.a11y-high-contrast,
+html.a11y-high-contrast.a11y-high-contrast.a11y-high-contrast .L {
     --accentColor: #ff1f1f !important;
     --altAccentColor: #ff7a7a !important;
     --infoColor: #1f7aff !important;

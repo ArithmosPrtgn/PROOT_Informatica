@@ -332,11 +332,6 @@ function setSelectedState(selectionName, selectionLabel) {
 			item.dataset.current = String(isSelected);
 			item.style.fontWeight = isSelected ? '700' : '400';
 		});
-
-		const currentSession = state.menuRoot.querySelector('#settings > div > h4');
-		if (currentSession) {
-			currentSession.textContent = `${state.structure?.tituloPrincipal || 'PROOT'} / ${selectionLabel}`;
-		}
 	}
 }
 
@@ -390,11 +385,6 @@ function renderSelectionByPath(contentName, displayLabel) {
 
 function decorateNavigationMenu(root) {
 	state.menuRoot = root;
-
-	const currentMenuTitle = root.querySelector('#settings > div > h4');
-	if (currentMenuTitle && state.structure) {
-		currentMenuTitle.textContent = `${state.structure.tituloPrincipal} / ${state.selectedLabel || getContentName(state.content[0])}`;
-	}
 
 	const templateList = root.querySelector('#firstOneNAL');
 	if (!templateList || !state.structure) {
@@ -458,7 +448,7 @@ function decorateNavigationMenu(root) {
 		const parentName = clickedItem.dataset.parentName;
 		const displayLabel = parentName ? `${parentName} / ${contentName}` : contentName;
 		renderSelectionByPath(contentName, displayLabel);
-		window.PROOTHamburgerMenu?.close?.();
+		updateSectionQueryParam(contentName);
 	});
 
 	generatedList.addEventListener('keydown', (event) => {
@@ -476,7 +466,7 @@ function decorateNavigationMenu(root) {
 		const parentName = clickedItem.dataset.parentName;
 		const displayLabel = parentName ? `${parentName} / ${contentName}` : contentName;
 		renderSelectionByPath(contentName, displayLabel);
-		window.PROOTHamburgerMenu?.close?.();
+		updateSectionQueryParam(contentName);
 	});
 }
 
@@ -562,13 +552,29 @@ async function loadArticleData() {
 	state.selectedLabel = state.selectedName;
 }
 
-// Matches paths shaped like /folder1/folder2/item.html (exactly two folder
-// segments followed by a file with an extension).
+function getSectionParam() {
+	const params = new URLSearchParams(window.location.search);
+	const sect = params.get('sect');
+	return sect ? sect.trim() : null;
+}
+
+function updateSectionQueryParam(contentName, { replace = false } = {}) {
+	if (!contentName) {
+		return;
+	}
+
+	const url = new URL(window.location.href);
+	if (url.searchParams.get('sect') === contentName) {
+		return;
+	}
+
+	url.searchParams.set('sect', contentName);
+	const method = replace ? 'replaceState' : 'pushState';
+	window.history[method]({ sect: contentName }, '', url);
+}
+
 const ARTICLE_PATH_PATTERN = /^\/[^/]+\/[^/]+\/[^/]+\.[a-zA-Z0-9]+$/;
 
-// Roots that are never content pages, even when they happen to match the
-// two-folder shape above (e.g. /err/http/foo.html, /err/other/foo.html,
-// /sobre/foo.html all look like /folder1/folder2/item.html but aren't).
 const NON_ARTICLE_PREFIXES = ['/err/', '/sobre/'];
 
 function isArticlePath(path) {
@@ -596,15 +602,25 @@ async function initArticlePage() {
 	try {
 		await loadArticleData();
 		window.PROOTArticlePage = {
-			decorateHamburgerMenu: decorateNavigationMenu,
+			decorateNavigation: decorateNavigationMenu,
 			renderSelection: renderSelectionByPath,
 			getState: () => state
 		};
+
+		decorateNavigationMenu(document);
 		applyStructureToNav();
-		if (state.menuRoot) {
-			decorateNavigationMenu(state.menuRoot);
+
+		const requestedSectionName = getSectionParam();
+		const requestedEntry = requestedSectionName ? getContentEntryByName(requestedSectionName) : null;
+
+		if (requestedEntry) {
+			const label = getContentName(requestedEntry);
+			renderSelectionByPath(label, label);
+			updateSectionQueryParam(label, { replace: true });
+		} else {
+			renderSelectionByPath(state.selectedName, state.selectedLabel);
+			updateSectionQueryParam(state.selectedName, { replace: true });
 		}
-		renderSelectionByPath(state.selectedName, state.selectedLabel);
 	} catch (error) {
 		console.error('Erro ao carregar conteúdo da página:', error);
 		state.mainArea.innerHTML = '<p>Não foi possível carregar o conteúdo desta página.</p>';
@@ -618,3 +634,19 @@ if (document.readyState === 'loading') {
 }
 
 document.addEventListener('headerLoaded', applyStructureToNav);
+
+
+window.addEventListener('popstate', () => {
+	if (!state.mainArea || !state.content.length) {
+		return;
+	}
+
+	const sectionName = getSectionParam();
+	const entry = (sectionName && getContentEntryByName(sectionName)) || state.content[0];
+	if (!entry) {
+		return;
+	}
+
+	const label = getContentName(entry);
+	renderSelectionByPath(label, label);
+});

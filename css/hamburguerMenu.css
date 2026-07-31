@@ -57,7 +57,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 50vw;
+    min-width: 250px;
+    max-width: 800px;
     padding: 0;
     background-color: var(--altAccentColor);
     color: var(--nonAccentColor);
@@ -69,12 +71,14 @@
 
 
 #settings > * { min-height: 0; }
-#firstOneNAL {max-height: 45vh; margin: 0 0 20px 0;}
+#firstOneNAL {margin: 20px 0;}
 
 .navigationArticleList > li, .navigationArticleList > details {
     font-family: "Google Sans Flex", sans-serif;
     box-sizing: border-box;
-    width: 98%;
+    width: 47vw;
+    min-width: 230px;
+    max-width: 780px;
     border-radius: 20px;
     border: 2px solid var(--altAccentColor);
     border-bottom: 2px solid var(--nonAccentColor) !important;
