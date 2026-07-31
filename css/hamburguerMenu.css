@@ -57,9 +57,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50vw;
+    width: 25vw;
     min-width: 250px;
     max-width: 500px;
+    margin: 30px;
     padding: 0;
     background-color: var(--altAccentColor);
     color: var(--nonAccentColor);
@@ -169,4 +170,18 @@ details[open] .detailsForHeader-body { grid-template-rows: 1fr; padding: 0; }
 
 details.is-closing .detailsForHeader-body {
     grid-template-rows: 0fr !important;
+}
+
+#pcWrapper {
+    display: flex;
+    flex-direction: row;
+    width: 95vw;
+}
+
+#pcWrapper > #mainArea { width: 75vw; }
+
+@media screen and (max-width: 720px) {
+    #pcWrapper {
+        flex-direction: column;
+    }
 }

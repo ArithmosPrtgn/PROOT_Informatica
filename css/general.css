@@ -525,15 +525,3 @@ body {
     transform:translateX(25%);
     }
 }
-
-#pcWrapper {
-    display: flex;
-    flex-direction: row;
-    width: 95vw;
-}
-
-@media screen and (max-width: 720px) {
-    #pcWrapper {
-        flex-direction: column;
-    }
-}
