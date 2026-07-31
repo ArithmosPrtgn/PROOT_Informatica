@@ -59,7 +59,7 @@
     align-items: center;
     width: 50vw;
     min-width: 250px;
-    max-width: 800px;
+    max-width: 500px;
     padding: 0;
     background-color: var(--altAccentColor);
     color: var(--nonAccentColor);
@@ -76,33 +76,40 @@
 .navigationArticleList > li, .navigationArticleList > details {
     font-family: "Google Sans Flex", sans-serif;
     box-sizing: border-box;
-    width: 47vw;
-    min-width: 230px;
-    max-width: 780px;
+    width: 95%;
     border-radius: 20px;
     border: 2px solid var(--altAccentColor);
     border-bottom: 2px solid var(--nonAccentColor) !important;
+    padding: 20px 15px;  
     transition: all 0.2s ease;
     cursor: pointer;
 }
 
+.navigationArticleList > li { padding: 20px 15px;  }
+
 .navigationArticleLabel {
     width: 100%;
+    max-width: 100%;
     display: flex;
+    flex-wrap: wrap;           
     gap: 15px;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     font-family: "Cal Sans", sans-serif;
-    box-sizing: content-box;
+    box-sizing: border-box;    
+    overflow-wrap: anywhere;    
+    word-break: break-word;   
 }
 
 .navigationArticleList > li {padding: 20px 0;}
-.detailsForHeader > summary {padding: 10px 0;}
+.detailsForHeader > summary {padding: 15px 0;}
 .navigationArticleList > li:hover, .detailsForHeader > summary:hover  {
     border: 2px solid var(--invertedNonAccentColor);
     background-color: var(--invertedNonAccentColor);
 }
+
+details.detailsForHeader { padding: 0;}
 
 
 .detailsForHeader > summary {
