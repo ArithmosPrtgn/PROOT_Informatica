@@ -511,7 +511,7 @@ if (state.navIcon && state.structure) {
 			replacement.setAttribute('aria-label', altText);
 
 			const use = document.createElementNS('http://www.w3.org/2000/svg', 'use');
-			use.setAttribute('href', `/resources/ico-sprite.svg#${symbolId}`);
+			use.setAttribute('href', `/resources/ico/c/${symbolId}.svg`);
 			replacement.append(use);
 
 			iconNode.replaceWith(replacement);
