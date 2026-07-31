@@ -57,10 +57,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 25vw;
+    width: 21vw;
     min-width: 250px;
     max-width: 500px;
-    margin: 30px;
+    margin: 15px 10px;
     padding: 0;
     background-color: var(--altAccentColor);
     color: var(--nonAccentColor);
@@ -176,6 +176,7 @@ details.is-closing .detailsForHeader-body {
     display: flex;
     flex-direction: row;
     width: 95vw;
+    gap: 50px
 }
 
 #pcWrapper > #mainArea { width: 75vw; }
@@ -184,4 +185,6 @@ details.is-closing .detailsForHeader-body {
     #pcWrapper {
         flex-direction: column;
     }
+
+    .navigationArticleList { width: 90vw;}
 }
