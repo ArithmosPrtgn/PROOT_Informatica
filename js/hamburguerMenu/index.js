@@ -5,6 +5,80 @@ let hamburgerMenuLoading = false;
 const themeToggleHelperUrl = '/js/darkMode/themeToggle.js';
 const saveAsHelperUrl = '/js/saveAs/index.js';
 
+// ---- Accessibility storage keys (ported from a11y index.js) ----
+const TEXT_SIZE_STORAGE_KEY = 'a11yTextScale';
+const ANIMATIONS_STORAGE_KEY = 'a11yAnimations';
+const HIGH_CONTRAST_STORAGE_KEY = 'a11yHighContrast';
+
+const DEFAULT_TEXT_SCALE = 1;
+
+// ---- Text Size ----
+function getSavedTextScale() {
+	const saved = parseFloat(localStorage.getItem(TEXT_SIZE_STORAGE_KEY));
+	return Number.isFinite(saved) ? saved : DEFAULT_TEXT_SCALE;
+}
+
+function applyTextScale(scale) {
+	document.documentElement.style.setProperty('--text-scale', scale);
+}
+
+function saveTextScale(scale) {
+	try {
+		localStorage.setItem(TEXT_SIZE_STORAGE_KEY, String(scale));
+	} catch (error) {
+		console.warn('Não foi possível salvar o tamanho de texto:', error);
+	}
+}
+
+// ---- Animations ----
+function getSavedAnimations() {
+	const saved = localStorage.getItem(ANIMATIONS_STORAGE_KEY);
+	return saved !== null ? saved === 'true' : true;
+}
+
+function applyAnimations(enabled) {
+	if (!enabled) {
+		document.documentElement.classList.add('a11y-no-animations');
+	} else {
+		document.documentElement.classList.remove('a11y-no-animations');
+	}
+}
+
+function saveAnimations(enabled) {
+	try {
+		localStorage.setItem(ANIMATIONS_STORAGE_KEY, String(enabled));
+	} catch (error) {
+		console.warn('Não foi possível salvar a configuração de animações:', error);
+	}
+}
+
+// ---- High Contrast ----
+function getSavedHighContrast() {
+	const saved = localStorage.getItem(HIGH_CONTRAST_STORAGE_KEY);
+	return saved === 'true';
+}
+
+function applyHighContrast(enabled) {
+	if (enabled) {
+		document.documentElement.classList.add('a11y-high-contrast');
+	} else {
+		document.documentElement.classList.remove('a11y-high-contrast');
+	}
+}
+
+function saveHighContrast(enabled) {
+	try {
+		localStorage.setItem(HIGH_CONTRAST_STORAGE_KEY, String(enabled));
+	} catch (error) {
+		console.warn('Não foi possível salvar a configuração de alto contraste:', error);
+	}
+}
+
+// Apply saved a11y settings as soon as this script loads, same as a11y/index.js did.
+applyTextScale(getSavedTextScale());
+applyAnimations(getSavedAnimations());
+applyHighContrast(getSavedHighContrast());
+
 function ensureThemeToggleHelper() {
 	if (window.PROOTThemeToggle) {
 		return Promise.resolve(window.PROOTThemeToggle);
@@ -107,6 +181,43 @@ async function initHamburgerSaveAs() {
 	saveAs.attach(button);
 }
 
+// Binds the accessibility controls (#textSize, #animatedWebsite, #highContrast)
+// that live inside hamburgerMenu.html, mirroring what a11y/index.js did for a11y.html.
+function initHamburgerA11yControls(root) {
+	const textSizeInput = root.querySelector('#textSize');
+	if (textSizeInput && textSizeInput.dataset.a11yBound !== 'true') {
+		textSizeInput.dataset.a11yBound = 'true';
+		textSizeInput.value = getSavedTextScale();
+		textSizeInput.addEventListener('input', () => {
+			const scale = parseFloat(textSizeInput.value);
+			applyTextScale(scale);
+			saveTextScale(scale);
+		});
+	}
+
+	const animatedCheckbox = root.querySelector('#animatedWebsite');
+	if (animatedCheckbox && animatedCheckbox.dataset.a11yBound !== 'true') {
+		animatedCheckbox.dataset.a11yBound = 'true';
+		animatedCheckbox.checked = getSavedAnimations();
+		animatedCheckbox.addEventListener('change', (e) => {
+			const enabled = e.target.checked;
+			applyAnimations(enabled);
+			saveAnimations(enabled);
+		});
+	}
+
+	const highContrastCheckbox = root.querySelector('#highContrast');
+	if (highContrastCheckbox && highContrastCheckbox.dataset.a11yBound !== 'true') {
+		highContrastCheckbox.dataset.a11yBound = 'true';
+		highContrastCheckbox.checked = getSavedHighContrast();
+		highContrastCheckbox.addEventListener('change', (e) => {
+			const enabled = e.target.checked;
+			applyHighContrast(enabled);
+			saveHighContrast(enabled);
+		});
+	}
+}
+
 async function openHamburgerMenu() {
 	if (hamburgerMenuRoot || hamburgerMenuLoading) {
 		return;
@@ -160,6 +271,7 @@ async function openHamburgerMenu() {
 
 		bindThemeButtons(hamburgerMenuRoot);
 		initHamburgerSaveAs();
+		initHamburgerA11yControls(hamburgerMenuRoot);
 	} catch (error) {
 		console.error('Erro ao abrir hamburguer menu:', error);
 	} finally {

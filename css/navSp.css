@@ -75,42 +75,6 @@
     box-shadow: 0 0 0 9px var(--invertedNonAccentColor);
 }
 
-.icoAniHB { display:inline-block; color:var(--invertedNonAccentColor); cursor:pointer; font-variation-settings: "FILL" 1, "wght" 700, "GRAD" 200, "opsz" 48; }
-.icoAniHB {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    will-change: transform, opacity;
-    transform-origin: center;
-}
-
-@keyframes HBIconSlideOut {
-    from {
-        transform: translateY(0) scale(1) rotate(0deg);
-        opacity: 1;
-    }
-    to {
-        transform: translateY(120%) scale(0.75) rotate(-45deg);
-        opacity: 0;
-    }
-}
-
-@keyframes HBIconSlideIn {
-    from {
-        transform: translateY(120%) scale(0.75) rotate(45deg);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0) scale(1) rotate(0deg);
-        opacity: 1;
-    }
-}
-
-.icoAniHB.is-leaving { animation: HBIconSlideOut 190ms cubic-bezier(0.7, 0, 0.84, 0) forwards; }
-.icoAniHB.is-entering { animation: HBIconSlideIn 300ms cubic-bezier(0.16, 1, 0.3, 1) forwards; }
-
-body.L .icoAniHB { font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48; }
-
 #subtitleArea:only-child {
     padding: 10px;
 }

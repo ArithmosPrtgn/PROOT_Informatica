@@ -1,6 +1,6 @@
 :root {
-    --accentColor: #ff4848;
-        --altAccentColor: #960101;
+    --accentColor: hsl(0, 58%, 59%);
+        --altAccentColor: hsl(0, 78%, 13%);
 
     --infoColor: hsl(224, 100%, 71%);
         --altInfoColor: hsl(224, 69%, 42%);
@@ -46,8 +46,8 @@
 }
 
 :root .L {
-    --altAccentColor: #ff4848;
-        --accentColor: #960101;
+    --altAccentColor: hsl(0, 58%, 59%);
+        --accentColor: hsl(0, 78%, 13%);
 
     --altInfoColor: hsl(224, 100%, 71%);
         --infoColor: hsl(224, 69%, 42%);
@@ -93,7 +93,8 @@
 }
 
 /*Acessibilidade Alto Contraste*/
-body.a11y-high-contrast {
+html.a11y-high-contrast.a11y-high-contrast.a11y-high-contrast,
+html.a11y-high-contrast.a11y-high-contrast.a11y-high-contrast .L {
     --accentColor: #ff1f1f !important;
     --altAccentColor: #ff7a7a !important;
     --infoColor: #1f7aff !important;

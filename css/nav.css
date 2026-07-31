@@ -17,7 +17,8 @@
     top: calc(10vh - 25px);
     z-index: 999;
     margin-top: -25px;     
-    padding-top: 25px;    
+    padding-top: 25px;
+    color: var(--nonAccentColor);
     background-color: var(--altAccentColor);
     border-radius: 0 0 15px 15px;
     display: flex;
@@ -39,7 +40,7 @@ nav {
 }
 
 #subtitle {
-    color: var(--invertedNonAccentColor);
+    color: var(--nonAccentColor);
     font-size: clamp(1rem, 2vw, 1.5rem);
     font-weight: 700;
 }

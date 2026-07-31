@@ -57,7 +57,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 21vw;
+    min-width: 250px;
+    max-width: 500px;
+    margin: 15px 10px;
     padding: 0;
     background-color: var(--altAccentColor);
     color: var(--nonAccentColor);
@@ -69,36 +72,45 @@
 
 
 #settings > * { min-height: 0; }
-#firstOneNAL {max-height: 45vh; margin: 0 0 20px 0;}
+#firstOneNAL {margin: 20px 0;}
 
 .navigationArticleList > li, .navigationArticleList > details {
     font-family: "Google Sans Flex", sans-serif;
     box-sizing: border-box;
-    width: 98%;
+    width: 95%;
     border-radius: 20px;
     border: 2px solid var(--altAccentColor);
     border-bottom: 2px solid var(--nonAccentColor) !important;
+    padding: 20px 15px;  
     transition: all 0.2s ease;
     cursor: pointer;
 }
 
+.navigationArticleList > li { padding: 20px 15px;  }
+
 .navigationArticleLabel {
     width: 100%;
+    max-width: 100%;
     display: flex;
+    flex-wrap: wrap;           
     gap: 15px;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     font-family: "Cal Sans", sans-serif;
-    box-sizing: content-box;
+    box-sizing: border-box;    
+    overflow-wrap: anywhere;    
+    word-break: break-word;   
 }
 
 .navigationArticleList > li {padding: 20px 0;}
-.detailsForHeader > summary {padding: 10px 0;}
+.detailsForHeader > summary {padding: 15px 0;}
 .navigationArticleList > li:hover, .detailsForHeader > summary:hover  {
     border: 2px solid var(--invertedNonAccentColor);
     background-color: var(--invertedNonAccentColor);
 }
+
+details.detailsForHeader { padding: 0; width: 100%;}
 
 
 .detailsForHeader > summary {
@@ -158,4 +170,24 @@ details[open] .detailsForHeader-body { grid-template-rows: 1fr; padding: 0; }
 
 details.is-closing .detailsForHeader-body {
     grid-template-rows: 0fr !important;
+}
+
+#pcWrapper {
+    display: flex;
+    flex-direction: row;
+    width: 95vw;
+    gap: 50px
+}
+
+#pcWrapper > #mainArea { width: 75vw; }
+
+@media screen and (max-width: 720px) {
+    #pcWrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navigationArticleList { width: 90vw; max-width: none; }
+
+    #pcWrapper > #mainArea { width: 95vw;}
 }

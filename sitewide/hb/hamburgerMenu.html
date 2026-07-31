@@ -30,27 +30,37 @@
                     </button>
                 </div>    
                 <br>
-            <h4>{{currentArticle}} / {{currentArticleSession}}</h4>
             <br>
-                <ul class="navigationArticleList" id="firstOneNAL" class="google-sans-flex-regular">
-                    <li>Content 1</li>
-                    <li>Content 2</li>
-                    <details class="detailsForHeader"><summary>Conteúdo 3</summary>
-                        <div class="detailsForHeader-body">
-                            <ul class="navigationArticleList">
-                                <li>3.1</li>
-                                <li>3.2</li>
-                                <li>3.3</li>
-                                <li>3.1</li>
-                                <li>3.2</li>
-                                <li>3.3</li>
-                                <li>3.1</li>
-                                <li>3.2</li>
-                                <li>3.3</li>
-                            </ul>
+            <div class="optionAccess" id="textSized">
+                    <div>
+                        <span aria-hidden="true" class="material-symbols-rounded iconMNeedsSpace iconM">format_size</span>
+                        <h4>Tamanho de texto:</h4>
+                    </div>
+                    <br>
+                    <div class="slide">
+                    <input type="range" id="textSize" min="0.5" max="2" value="1" step="0.1">
+                        <div class="ticks">
+                            <span>0.5</span>
+                            <span>1</span>
+                            <span>1.5</span>
+                            <span>2</span>
                         </div>
-                    </details>
-                </ul>
+                    </div>
+                </div>
+                <div class="optionAccess">
+                    <div>
+                        <span aria-hidden="true" class="material-symbols-rounded iconMNeedsSpace iconM">animation</span>
+                        <h4>Animações:</h4>
+                    </div>
+                    <span class="chck"><input type="checkbox" id="animatedWebsite" checked></span>
+                </div>
+                <div class="optionAccess">
+                    <div>
+                        <span aria-hidden="true" class="material-symbols-rounded iconMNeedsSpace iconM">contrast</span>
+                        <h4>Alto Contraste:</h4>
+                    </div>
+                    <span class="chck"><input type="checkbox" id="highContrast"></span>
+                </div>
             </div>
             <div>
                 <button class="HBButtons" id="themeComplex">
