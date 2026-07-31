@@ -44,7 +44,7 @@
     position: absolute;
     width: 6px;
     height: 12px;
-    border: solid var(--invertedNonAccentColor);
+    border: solid var(--nonAccentColor);
     border-width: 0 3px 3px 0;
     transform: rotate(45deg) scale(0);
     transition: transform 0.15s ease;
