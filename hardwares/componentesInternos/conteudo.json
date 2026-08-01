@@ -12,7 +12,7 @@
     },{
 
     "tipo":"image",
-    "fileLocation": "/hardwares/componentesInternos/imagensconteudo/pc.jpg"
+    "fileLocation": "/hardwares/componentesInternos/imagensconteudo/pc.webp"
 
     }
     ]
@@ -23,7 +23,7 @@
             "texto": "<p>A história da placa-mãe começa de forma bem diferente do que conhecemos hoje. Nos primeiros computadores, não existia uma única \"placa central\"; os sistemas utilizavam um painel traseiro complexo (chamado de <em>backplane</em>) onde dezenas de placas individuais — cada uma com uma função isolada — eram conectadas por um emaranhado de fios. O grande marco de mudança ocorreu em 1981, com o lançamento do <strong>IBM Personal Computer (PC)</strong>. A IBM introduziu o que chamou de \"placa planar\", a primeira placa-mãe verdadeira, que finalmente consolidou o processador (CPU) e a memória RAM em um único circuito impresso, deixando slots de expansão livres apenas para componentes secundários.</p>"
         }, {
            "tipo":"image",
-    "fileLocation": "/hardwares/componentesInternos/imagensconteudo/placamae1981.jpg",
+    "fileLocation": "/hardwares/componentesInternos/imagensconteudo/placamae1981.webp",
     "caption":"Primeira placa mãe"
     },{
             
@@ -58,7 +58,7 @@
         },{
 
         "tipo":"image",
-    "fileLocation": "/hardwares/componentesInternos/imagensconteudo/eATX.jpg",
+    "fileLocation": "/hardwares/componentesInternos/imagensconteudo/eATX.webp",
     "caption":"Placa E-ATX"
 
         },{
@@ -74,7 +74,7 @@
         },{
 
         "tipo":"image",
-    "fileLocation": "/hardwares/componentesInternos/imagensconteudo/atx.jpg",
+    "fileLocation": "/hardwares/componentesInternos/imagensconteudo/atx.webp",
     "caption":"Placa ATX"
 
         },{
@@ -90,7 +90,7 @@
         },{
 
         "tipo":"image",
-    "fileLocation": "/hardwares/componentesInternos/imagensconteudo/mATX.jpg",
+    "fileLocation": "/hardwares/componentesInternos/imagensconteudo/mATX.webp",
     "caption":"Placa Micro-ATX"
 
         },{
@@ -106,7 +106,7 @@
         },{
 
         "tipo":"image",
-    "fileLocation": "/hardwares/componentesInternos/imagensconteudo/miniITX.jpg",
+    "fileLocation": "/hardwares/componentesInternos/imagensconteudo/miniITX.webp",
     "caption":"Placa Mini-ITX"
 
         },{
@@ -136,7 +136,7 @@
     },{
 
     "tipo":"image",
-    "fileLocation": "/hardwares/componentesInternos/imagensconteudo/intel1103.jpg"
+    "fileLocation": "/hardwares/componentesInternos/imagensconteudo/intel1103.webp"
 
     },{
 
@@ -157,7 +157,7 @@
     },{
 
      "tipo":"image",
-    "fileLocation": "/hardwares/componentesInternos/imagensconteudo/ddr.jpg"
+    "fileLocation": "/hardwares/componentesInternos/imagensconteudo/ddr.webp"
 
         
     }
@@ -169,7 +169,7 @@
         "texto": "<p>Atualmente estamos na era de DDRs e existem 5 tipos: "
     }, {
        "tipo":"image",
-    "fileLocation": "/hardwares/componentesInternos/imagensconteudo/ddr.jpg"
+    "fileLocation": "/hardwares/componentesInternos/imagensconteudo/ddr.webp"
 
         }]
 }, { 
@@ -180,7 +180,7 @@
     },{
 
     "tipo":"image",
-    "fileLocation": "/hardwares/componentesInternos/imagensconteudo/primeiroDiscoRigido.jpg"
+    "fileLocation": "/hardwares/componentesInternos/imagensconteudo/primeiroDiscoRigido.webp"
 
 
     },{
@@ -194,7 +194,7 @@
         },{
 
         "tipo":"image",
-        "fileLocation": "/hardwares/componentesInternos/imagensconteudo/ssd1991.jpg"
+        "fileLocation": "/hardwares/componentesInternos/imagensconteudo/ssd1991.webp"
 
 
         },{
@@ -248,7 +248,7 @@
             },{
 
               "tipo":"image",
-        "fileLocation": "/hardwares/componentesInternos/imagensconteudo/placadevideo1999.jpg"
+        "fileLocation": "/hardwares/componentesInternos/imagensconteudo/placadevideo1999.webp"
 
             },{
 
@@ -258,7 +258,7 @@
         },{
 
         "tipo":"image",
-        "fileLocation": "/hardwares/componentesInternos/imagensconteudo/placadevideo2015.jpg"
+        "fileLocation": "/hardwares/componentesInternos/imagensconteudo/placadevideo2015.webp"
 
 
     }
