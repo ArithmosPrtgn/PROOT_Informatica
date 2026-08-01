@@ -40,7 +40,7 @@ nav {
 }
 
 #subtitle {
-    color: var(--nonAccentColor);
+    color: #fafafa;
     font-size: clamp(1rem, 2vw, 1.5rem);
     font-weight: 700;
 }
