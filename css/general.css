@@ -344,7 +344,7 @@ footer {
 }
 
 .baldi {
-    --calloutSurfaceColor: var(--altMathColor);
+    --calloutBorderColor: var(--altMathColor);
     --calloutSurfaceColor: var(--surfaceMathColor);
     --calloutIconColor: var(--altMathColor);
 }

@@ -1,34 +1,25 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-    <div id="mainNav">
-        <nav>
-            <a id="leftSide" href="/index.html">
-                <img id="favicon" src="/resources/favicon.svg" alt="Ícone oficial do PROOT">
-                <div>
-                    <h1 id="titleNav" class="cal-sans-regular">PROOT</h1>
-                </div>
-            </a>
-
-
-            <div class="rightSide">
-                <button id="hamburguerB">
-                    <span id="HBIco" class="material-symbols-rounded iconM">menu</span>
-                </button>
+<div id="mainNav">
+    <nav>
+        <a id="leftSide" href="/index.html">
+            <img id="favicon" src="/resources/favicon.svg" alt="Ícone oficial do PROOT">
+            <div>
+                <h1 id="titleNav" class="cal-sans-regular">PROOT</h1>
             </div>
-        </nav>
-    </div>
-    <div id="subtitleArea">
-        <h4 id="subtitle">{{currentArticleSection}}</h4>
-        <form id="searchBox">
-                <span id="magnify" class="material-symbols-rounded">search</span>
-                <input id="search" type="text" name="searchMe" placeholder="Pesquisar um termo" required>
-        </form>
-        <div id="searchResults" class="hidden"></div>
-    </div>
-</body>
-</html>
+        </a>
+
+
+        <div class="rightSide">
+            <button id="hamburguerB">
+                <span id="HBIco" class="material-symbols-rounded iconM">menu</span>
+            </button>
+        </div>
+    </nav>
+</div>
+<div id="subtitleArea">
+    <h4 id="subtitle">{{currentArticleSection}}</h4>
+    <form id="searchBox">
+            <span id="magnify" class="material-symbols-rounded">search</span>
+            <input id="search" type="text" name="searchMe" placeholder="Pesquisar um termo" required>
+    </form>
+    <div id="searchResults" class="hidden"></div>
+</div>

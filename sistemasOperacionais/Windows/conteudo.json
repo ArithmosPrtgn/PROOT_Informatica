@@ -7,7 +7,7 @@
     },{
     
     "tipo":"image",
-    "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/tiposWindows.jpg"
+    "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/tiposWindows.webp"
     }
     ]
 }, {
@@ -24,7 +24,7 @@
     }, {
     
     "tipo":"image",
-    "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/windows1.png" 
+    "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/windows1.webp" 
 
     },{
 
@@ -39,7 +39,7 @@
     },{
 
     "tipo":"image",
-    "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/windows2.png" 
+    "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/windows2.webp" 
         
     },{
 
@@ -54,7 +54,7 @@
     },{
 
     "tipo":"image",
-    "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/windows3.png" 
+    "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/windows3.webp" 
         
 
     }
@@ -72,7 +72,7 @@
         },{
 
         "tipo":"image",
-    "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/windows95.png" 
+    "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/windows95.webp" 
 
         },{
 
@@ -88,7 +88,7 @@
         },{
 
          "tipo":"image",
-    "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/windows98.png" 
+    "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/windows98.webp" 
 
 
         },{
@@ -104,7 +104,7 @@
         },{
 
         "tipo":"image",
-    "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/windowsMe.png" 
+    "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/windowsMe.webp" 
 
         },{
 
@@ -119,7 +119,7 @@
         },{
 
         "tipo":"image",
-    "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/windows2000.jpg" 
+    "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/windows2000.webp" 
 
         },{
 
@@ -134,7 +134,7 @@
         },{
 
          "tipo":"image",
-    "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/windowsXp.png" 
+    "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/windowsXp.webp" 
 
         }
     ]
@@ -152,7 +152,7 @@
         }, {
            
         "tipo":"image",
-    "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/windowsVista.png"
+    "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/windowsVista.webp"
 
         },{
 
@@ -167,7 +167,7 @@
         },{
 
         "tipo":"image",
-    "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/windows7.png"
+    "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/windows7.webp"
 
 
         }
@@ -185,7 +185,7 @@
     },{
 
     "tipo":"image",
-    "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/windows8.png"
+    "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/windows8.webp"
 
 
     },{
@@ -201,7 +201,7 @@
     },{
 
     "tipo":"image",
-    "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/windows81.png"
+    "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/windows81.webp"
 
 
     }
@@ -219,7 +219,7 @@
     },{
 
     "tipo":"image",
-    "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/windows10.png"
+    "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/windows10.webp"
 
 
     },{
@@ -235,7 +235,7 @@
     },{
 
     "tipo":"image",
-    "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/windows11.jpg"
+    "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/windows11.webp"
 
 
     }
@@ -248,7 +248,7 @@
         "texto": "<p>O <strong>Gerenciador de Tarefas</strong> é uma ferramenta essencial e nativa do Windows que atua como o centro de monitoramento e controle do sistema. Acessado frequentemente pelo atalho clássico \"Ctrl + Shift + Esc\" ou através do \"Ctrl + Alt + Del\", ele permite aos usuários visualizar todos os programas e processos em execução no momento, sendo famoso por sua função de \"Finalizar Tarefa\" para forçar o fechamento de aplicativos travados. Além disso, ele evoluiu ao longo dos anos para oferecer gráficos detalhados de desempenho em tempo real sobre o uso do processador (CPU), memória RAM, disco e rede, além de permitir gerenciar facilmente quais aplicativos são abertos automaticamente na inicialização do computador.</p>"
     }, {
         "tipo": "image",
-         "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/gerenciadorTarefa.png"
+         "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/gerenciadorTarefa.webp"
     }]
 }, {
     "nomeSS": "Gerenciador de arquivos",
@@ -258,7 +258,7 @@
     },{
     
     "tipo": "image",
-         "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/gerenciadorArquivo.jpg"
+         "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/gerenciadorArquivo.webp"
 
     }]
 }, {
@@ -269,7 +269,7 @@
     }, {
 
       "tipo": "image",
-         "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/gerenciadorDispositivo.jpg"
+         "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/gerenciadorDispositivo.webp"
   
     }]
 }, {
@@ -280,13 +280,13 @@
     }, {
             
         "tipo": "image",
-         "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/cores.png",
+         "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/cores.webp",
          "caption":"Personalizar cores"
 
     }, {
     
         "tipo": "image",
-         "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/planoFundo.png",
+         "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/planoFundo.webp",
          "caption":"Personalizar Plano de Fundo"
 
 
@@ -299,13 +299,13 @@
     }, {
         
         "tipo": "image",
-         "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/idioma.png",
+         "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/idioma.webp",
          "caption":"Personalizar idioma"
 
     }, {
        
         "tipo": "image",
-         "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/horas.png",
+         "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/horas.webp",
          "caption":"Personalizar horas"
 
     }]
@@ -317,7 +317,7 @@
     }, {
         
         "tipo": "image",
-         "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/desinstalarPrograma.png",
+         "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/desinstalarPrograma.webp",
          "caption":"desinstalar programas"
 
     }]
@@ -329,7 +329,7 @@
     }, {
 
          "tipo": "image",
-         "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/usuarios.jpg"
+         "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/usuarios.webp"
   
 
     }]
@@ -344,7 +344,7 @@
     },{
 
          "tipo": "image",
-         "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/gerenciamentoDisco.png"
+         "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/gerenciamentoDisco.webp"
   
 
     }
@@ -362,7 +362,7 @@
     },{
 
         "tipo": "image",
-         "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/restauracao.png"
+         "fileLocation":"/sistemasOperacionais/Windows/conteudoimagem/restauracao.webp"
   
 
     }
@@ -427,7 +427,7 @@
 "nomeSS": "Copiar, mover e deletar",
     "conteudo": [{
     "tipo": "p",
-    "texto":"<p>Para o gerenciamento de arquivos e pastas no <strong>Terminal do Windows</strong> (Prompt de Comando ou PowerShell), existem comandos específicos para copiar, mover e deletar. Para fazer cópias, utiliza-se o comando <strong><code>copy</code></strong> seguido do nome do arquivo e do caminho de destino (exemplo: <code>copy foto.jpg C:\\Backup\"</code>), enquanto para copiar pastas inteiras recomenda-se o <strong><code>xcopy</code></strong> ou o mais robusto <strong><code>robocopy</code></strong>. Para transferir itens de um local para outro, o comando <strong><code>move</code></strong> é o escolhido, utilizando a mesma lógica de origem e destino. Na hora da exclusão, utiliza-se o <strong><code>del</code></strong> para apagar arquivos individuais e o <strong><code>rmdir</code></strong> (ou <strong><code>rd</code></strong>) para remover diretórios inteiros. Vale destacar que, se você estiver utilizando o moderno PowerShell, o sistema também aceita atalhos clássicos do universo Linux, como <strong><code>cp</code></strong> para copiar, <strong><code>mv</code></strong> para mover e <strong><code>rm</code></strong> para deletar itens de forma rápida e prática.</p>"
+    "texto":"<p>Para o gerenciamento de arquivos e pastas no <strong>Terminal do Windows</strong> (Prompt de Comando ou PowerShell), existem comandos específicos para copiar, mover e deletar. Para fazer cópias, utiliza-se o comando <strong><code>copy</code></strong> seguido do nome do arquivo e do caminho de destino (exemplo: <code>copy foto.webp C:\\Backup\"</code>), enquanto para copiar pastas inteiras recomenda-se o <strong><code>xcopy</code></strong> ou o mais robusto <strong><code>robocopy</code></strong>. Para transferir itens de um local para outro, o comando <strong><code>move</code></strong> é o escolhido, utilizando a mesma lógica de origem e destino. Na hora da exclusão, utiliza-se o <strong><code>del</code></strong> para apagar arquivos individuais e o <strong><code>rmdir</code></strong> (ou <strong><code>rd</code></strong>) para remover diretórios inteiros. Vale destacar que, se você estiver utilizando o moderno PowerShell, o sistema também aceita atalhos clássicos do universo Linux, como <strong><code>cp</code></strong> para copiar, <strong><code>mv</code></strong> para mover e <strong><code>rm</code></strong> para deletar itens de forma rápida e prática.</p>"
     },{
 
     "tipo":"code",
