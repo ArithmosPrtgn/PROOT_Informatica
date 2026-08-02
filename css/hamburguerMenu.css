@@ -72,18 +72,21 @@
 
 
 #settings > * { min-height: 0; }
-#firstOneNAL {margin: 20px 0;}
+#firstOneNAL {margin: 20px 0; max-height: 70vh;}
 
 .navigationArticleList > li, .navigationArticleList > details {
     font-family: "Google Sans Flex", sans-serif;
     box-sizing: border-box;
     width: 95%;
     border-radius: 20px;
-    border: 2px solid var(--altAccentColor);
-    border-bottom: 2px solid var(--nonAccentColor) !important;
     padding: 20px 15px;  
     transition: all 0.2s ease;
     cursor: pointer;
+}
+
+.navigationArticleList > li {
+    border: 2px solid var(--altAccentColor);
+    border-bottom: 2px solid var(--nonAccentColor) !important;
 }
 
 .navigationArticleList > li { padding: 20px 15px;  }
@@ -176,7 +179,8 @@ details.is-closing .detailsForHeader-body {
     display: flex;
     flex-direction: row;
     width: 95vw;
-    gap: 50px
+    gap: 25px;
+    align-items: flex-start;
 }
 
 #pcWrapper > #mainArea { width: 75vw; }

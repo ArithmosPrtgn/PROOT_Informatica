@@ -35,10 +35,15 @@
     background-color: var(--surfaceColor);
     color: var(--nonAccentColor);
     border: none;
-    width: max(23vw, 210px);
+    width: max(22vw, 210px);
     height: 100%;
     font-size: 1.25em;
     font-family: inherit; 
+}
+
+#search::placeholder {
+    color: var(--invertedNonAccentColor);
+    opacity: 0.6;
 }
 
 #NavLoL { min-height: 18vh; }
@@ -127,7 +132,7 @@
 .searchResultItem:last-child { border-bottom: none; }
 
 .searchResultItem:hover, .searchResultItem:focus {
-    background-color: var(--altAccentColor);
+    background-color: var(--accentColor);
 }
 
 .searchResultLabel {
@@ -167,6 +172,7 @@
     border-radius: 18px;
     border-bottom: 1px solid rgba(128,128,128,0.15);
     cursor: pointer;
+    transition: all 0.3s ease
 }
 
 @media screen and (max-width: 500px) {

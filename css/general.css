@@ -1,5 +1,7 @@
 :root { --text-scale: 1}
 
+html { scrollbar-gutter: stable; }
+
 /*Acessibilidade - Sem animações */
 :root.a11y-no-animations *,
 :root.a11y-no-animations *::before,
@@ -225,7 +227,7 @@ button:active, .fakeButton:active {
 .iconMNeedsSpace { margin-right: 5px;}
 
 footer {
-    width: 100vw;
+    width: 100%;
     flex: 1 0 auto;
     display: flex;
     border-radius: 10px 10px 0 0;
@@ -259,11 +261,14 @@ footer {
     isolation: isolate;
 }
 
-.foregroundCallOutIcon, .calloutBox h3 { margin: 0 0 0 10px; }
+.calloutBox h3 { margin: 0 0 0 10px; }
 
 .foregroundCallOutIcon { 
     font-size: 2rem !important;
     color: var(--invertedNonAccentColor);
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
 }
 
 .calloutBox > :not(.backgroundCallOutIcon) {
@@ -372,7 +377,7 @@ footer {
     transform: rotate(-15deg);
         transform-origin: center;
     position: absolute;
-        right: 5%;
+        right: 0%;
         bottom: -40%;
     font-size: 300px !important;
     pointer-events: none;
@@ -416,7 +421,7 @@ footer {
     border-radius: 15px;
     margin: 10px 0;
     padding: 20px;
-    width: 90%;
+    width: 80%;
     overflow: hidden;
     max-width: 70vw;
     transition: all 0.3s ease;
@@ -525,3 +530,12 @@ body {
     transform:translateX(25%);
     }
 }
+
+.aritcleContent{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.articleContent > h1 { text-align: left; }
