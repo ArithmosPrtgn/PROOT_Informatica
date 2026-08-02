@@ -35,7 +35,7 @@
     background-color: var(--surfaceColor);
     color: var(--nonAccentColor);
     border: none;
-    width: max(21vw, 210px);
+    width: max(22vw, 210px);
     height: 100%;
     font-size: 1.25em;
     font-family: inherit; 
