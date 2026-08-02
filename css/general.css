@@ -377,7 +377,7 @@ footer {
     transform: rotate(-15deg);
         transform-origin: center;
     position: absolute;
-        right: 5%;
+        right: 0%;
         bottom: -40%;
     font-size: 300px !important;
     pointer-events: none;
@@ -421,7 +421,7 @@ footer {
     border-radius: 15px;
     margin: 10px 0;
     padding: 20px;
-    width: 90%;
+    width: 80%;
     overflow: hidden;
     max-width: 70vw;
     transition: all 0.3s ease;
@@ -530,3 +530,12 @@ body {
     transform:translateX(25%);
     }
 }
+
+.aritcleContent{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.articlewContent > h1 { text-align: left; }

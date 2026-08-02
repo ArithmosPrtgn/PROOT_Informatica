@@ -179,7 +179,7 @@ details.is-closing .detailsForHeader-body {
     display: flex;
     flex-direction: row;
     width: 95vw;
-    gap: 50px;
+    gap: 25px;
     align-items: flex-start;
 }
 
