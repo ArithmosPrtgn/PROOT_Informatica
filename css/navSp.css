@@ -41,6 +41,11 @@
     font-family: inherit; 
 }
 
+#search::placeholder {
+    color: var(--nonAccentColor);
+    opacity: 0.6;
+}
+
 #NavLoL { min-height: 18vh; }
 
 #magnify, #HBIco { font-size: 2em; color: var(--invertedNonAccentColor); }

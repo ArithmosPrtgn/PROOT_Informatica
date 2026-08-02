@@ -1,5 +1,7 @@
 :root { --text-scale: 1}
 
+html { scrollbar-gutter: stable; }
+
 /*Acessibilidade - Sem animações */
 :root.a11y-no-animations *,
 :root.a11y-no-animations *::before,
@@ -225,7 +227,7 @@ button:active, .fakeButton:active {
 .iconMNeedsSpace { margin-right: 5px;}
 
 footer {
-    width: 100vw;
+    width: 100%;
     flex: 1 0 auto;
     display: flex;
     border-radius: 10px 10px 0 0;
@@ -259,11 +261,14 @@ footer {
     isolation: isolate;
 }
 
-.foregroundCallOutIcon, .calloutBox h3 { margin: 0 0 0 10px; }
+.calloutBox h3 { margin: 0 0 0 10px; }
 
 .foregroundCallOutIcon { 
     font-size: 2rem !important;
     color: var(--invertedNonAccentColor);
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
 }
 
 .calloutBox > :not(.backgroundCallOutIcon) {

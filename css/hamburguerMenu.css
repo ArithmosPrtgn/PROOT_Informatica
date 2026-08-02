@@ -79,11 +79,14 @@
     box-sizing: border-box;
     width: 95%;
     border-radius: 20px;
-    border: 2px solid var(--altAccentColor);
-    border-bottom: 2px solid var(--nonAccentColor) !important;
     padding: 20px 15px;  
     transition: all 0.2s ease;
     cursor: pointer;
+}
+
+.navigationArticleList > li {
+    border: 2px solid var(--altAccentColor);
+    border-bottom: 2px solid var(--nonAccentColor) !important;
 }
 
 .navigationArticleList > li { padding: 20px 15px;  }
