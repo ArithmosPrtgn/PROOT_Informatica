@@ -72,7 +72,7 @@
 
 
 #settings > * { min-height: 0; }
-#firstOneNAL {margin: 20px 0;}
+#firstOneNAL {margin: 20px 0; max-height: 70vh;}
 
 .navigationArticleList > li, .navigationArticleList > details {
     font-family: "Google Sans Flex", sans-serif;
@@ -179,7 +179,8 @@ details.is-closing .detailsForHeader-body {
     display: flex;
     flex-direction: row;
     width: 95vw;
-    gap: 50px
+    gap: 50px;
+    align-items: flex-start;
 }
 
 #pcWrapper > #mainArea { width: 75vw; }
