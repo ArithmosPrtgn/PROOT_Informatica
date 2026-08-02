@@ -23,6 +23,7 @@
 
     ready = true;
     observer.disconnect();
+    clearInterval(pollTimer);
     initSearch(input);
   }
 
@@ -59,6 +60,10 @@
         resultsBox.classList.add('hidden');
       }
     });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') resultsBox.classList.add('hidden');
+    });
   }
 
   function buildIndex() {
@@ -67,7 +72,7 @@
     const index = [];
     let currentSection = null;
 
-    for (const block of content) {
+    content.forEach((block, blockIndex) => {
       if (block.nomeS) currentSection = block.nomeS;
 
       const contentName = block.nomeSS || block.nomeS;
@@ -81,6 +86,7 @@
         if (!text) continue;
         const plain = stripHtml(text);
         index.push({
+          blockIndex,
           section: currentSection,
           subsection: block.nomeSS || null,
           contentName,
@@ -89,7 +95,7 @@
           textLower: plain.toLowerCase()
         });
       }
-    }
+    });
     searchIndex = index;
   }
 
@@ -114,25 +120,26 @@
     const q = query.toLowerCase().trim();
     if (!q) return [];
 
-    const bestByEntry = new Map();
+    const bestByBlock = new Map();
 
     for (const entry of searchIndex) {
       const score = scoreMatch(entry, q);
       if (score <= 0) continue;
 
-      const existing = bestByEntry.get(entry.contentName);
+      const existing = bestByBlock.get(entry.blockIndex);
       if (!existing || score > existing.score) {
-        bestByEntry.set(entry.contentName, { ...entry, score });
+        bestByBlock.set(entry.blockIndex, { ...entry, score });
       }
     }
 
-    return Array.from(bestByEntry.values())
+    return Array.from(bestByBlock.values())
       .sort((a, b) => b.score - a.score)
       .slice(0, 8);
   }
 
   function scoreMatch(entry, q) {
     let score = 0;
+    if (entry.contentName && entry.contentName.toLowerCase().includes(q)) score += 10;
     if (entry.subsection && entry.subsection.toLowerCase().includes(q)) score += 10;
     if (entry.section && entry.section.toLowerCase().includes(q)) score += 8;
     if (entry.textLower.includes(q)) score += 3;
@@ -174,7 +181,11 @@
         <span class="searchResultText">${highlight(snippet, query)}</span>
       `;
       el.addEventListener('click', () => {
-        window.PROOTArticlePage.renderSelection(r.contentName, r.displayLabel);
+        window.PROOTArticlePage.renderSelection(r.contentName, r.displayLabel, {
+          blockIndex: r.blockIndex,
+          section: r.section,
+          subsection: r.subsection
+        });
         window.PROOTHamburgerMenu?.close?.();
         resultsBox.classList.add('hidden');
         searchInput.value = '';

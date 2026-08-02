@@ -25,7 +25,9 @@
     justify-content: space-between;
 }
 
-#upperContent { width: 90%; }
+#upperContent { width: 90%; overflow-y: auto}
+
+#settings > div { overflow-y: auto;}
 
 #settings {
     display: flex;
@@ -72,7 +74,7 @@
 
 
 #settings > * { min-height: 0; }
-#firstOneNAL {margin: 20px 0; max-height: 70vh;}
+#firstOneNAL {margin: 20px 0; max-height: 50vh; height: fit-content;}
 
 .navigationArticleList > li, .navigationArticleList > details {
     font-family: "Google Sans Flex", sans-serif;
