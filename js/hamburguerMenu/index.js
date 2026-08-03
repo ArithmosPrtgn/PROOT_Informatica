@@ -82,6 +82,9 @@ function saveHighContrast(enabled) {
 // ---- Dynamic Background ----
 function getSavedBackgroundDynamic() {
 	const saved = localStorage.getItem(BACKGROUND_DYNAMIC_STORAGE_KEY);
+
+	if( saved != 'true' && saved != 'false') {return true;}
+
 	return saved === 'true';
 }
 
@@ -102,6 +105,9 @@ function saveBackgroundDynamic(enabled) {
 // ---- SFX ----
 function getSavedSFX() {
 	const saved = localStorage.getItem(SFX_STORAGE_KEY);
+
+	if (saved != 'true' && saved != 'false') {return true;}
+
 	return saved === 'true';
 }
 
@@ -139,7 +145,6 @@ function initSFXListener() {
 	});
 }
 
-// Apply saved a11y settings as soon as this script loads, same as a11y/index.js did.
 applyTextScale(getSavedTextScale());
 applyAnimations(getSavedAnimations());
 applyHighContrast(getSavedHighContrast());
