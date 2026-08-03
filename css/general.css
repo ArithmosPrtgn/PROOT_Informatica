@@ -522,7 +522,7 @@ body {
     opacity:.3;
 }
 
-.bg1.off, .bg2.off, .bg3.off {display: none;}
+.bg.off, .bg2.off, .bg3.off {display: none;}
 
 @keyframes slide {
     0% {
