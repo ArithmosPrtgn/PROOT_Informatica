@@ -5,12 +5,17 @@ let hamburgerMenuLoading = false;
 const themeToggleHelperUrl = '/js/darkMode/themeToggle.js';
 const saveAsHelperUrl = '/js/saveAs/index.js';
 
-// ---- Accessibility storage keys (ported from a11y index.js) ----
 const TEXT_SIZE_STORAGE_KEY = 'a11yTextScale';
 const ANIMATIONS_STORAGE_KEY = 'a11yAnimations';
 const HIGH_CONTRAST_STORAGE_KEY = 'a11yHighContrast';
+const BACKGROUND_DYNAMIC_STORAGE_KEY = 'a11yBackgroundDynamic';
+const SFX_STORAGE_KEY = 'a11ySFX';
 
 const DEFAULT_TEXT_SCALE = 1;
+
+const DYNAMIC_BG_SELECTOR = '.bg, .bg2, .bg3';
+const sfxClickSoundUrl = '/resources/sfx/button.wav';
+let sfxAudio = null;
 
 // ---- Text Size ----
 function getSavedTextScale() {
@@ -74,10 +79,78 @@ function saveHighContrast(enabled) {
 	}
 }
 
+// ---- Dynamic Background ----
+function getSavedBackgroundDynamic() {
+	const saved = localStorage.getItem(BACKGROUND_DYNAMIC_STORAGE_KEY);
+	return saved === 'true';
+}
+
+function applyBackgroundDynamic(enabled) {
+	document.querySelectorAll(DYNAMIC_BG_SELECTOR).forEach((el) => {
+		el.classList.toggle('off', !enabled);
+	});
+}
+
+function saveBackgroundDynamic(enabled) {
+	try {
+		localStorage.setItem(BACKGROUND_DYNAMIC_STORAGE_KEY, String(enabled));
+	} catch (error) {
+		console.warn('Não foi possível salvar a configuração de plano de fundo dinâmico:', error);
+	}
+}
+
+// ---- SFX ----
+function getSavedSFX() {
+	const saved = localStorage.getItem(SFX_STORAGE_KEY);
+	return saved === 'true';
+}
+
+function saveSFX(enabled) {
+	try {
+		localStorage.setItem(SFX_STORAGE_KEY, String(enabled));
+	} catch (error) {
+		console.warn('Não foi possível salvar a configuração de SFX:', error);
+	}
+}
+
+function playSFXClickSound() {
+	if (!sfxAudio) {
+		sfxAudio = new Audio(sfxClickSoundUrl);
+	}
+	sfxAudio.currentTime = 0;
+	sfxAudio.play().catch((error) => {
+		console.warn('Não foi possível tocar o som:', error);
+	});
+}
+
+function initSFXListener() {
+	if (document.documentElement.dataset.sfxBound === 'true') {
+		return;
+	}
+	document.documentElement.dataset.sfxBound = 'true';
+
+	document.addEventListener('click', (event) => {
+		if (!getSavedSFX()) {
+			return;
+		}
+		if (event.target.closest('button')) {
+			playSFXClickSound();
+		}
+	});
+}
+
 // Apply saved a11y settings as soon as this script loads, same as a11y/index.js did.
 applyTextScale(getSavedTextScale());
 applyAnimations(getSavedAnimations());
 applyHighContrast(getSavedHighContrast());
+initSFXListener();
+
+function applySavedBackgroundDynamicWhenReady() {
+	applyBackgroundDynamic(getSavedBackgroundDynamic());
+}
+
+document.addEventListener('DOMContentLoaded', applySavedBackgroundDynamicWhenReady);
+document.addEventListener('headerLoaded', applySavedBackgroundDynamicWhenReady);
 
 function ensureThemeToggleHelper() {
 	if (window.PROOTThemeToggle) {
@@ -181,8 +254,7 @@ async function initHamburgerSaveAs() {
 	saveAs.attach(button);
 }
 
-// Binds the accessibility controls (#textSize, #animatedWebsite, #highContrast)
-// that live inside hamburgerMenu.html, mirroring what a11y/index.js did for a11y.html.
+// Binds the accessibility controls (#textSize, #animatedWebsite, #highContrast, #backgroundDny, #otherSFX) that live inside hamburgerMenu.html
 function initHamburgerA11yControls(root) {
 	const textSizeInput = root.querySelector('#textSize');
 	if (textSizeInput && textSizeInput.dataset.a11yBound !== 'true') {
@@ -214,6 +286,26 @@ function initHamburgerA11yControls(root) {
 			const enabled = e.target.checked;
 			applyHighContrast(enabled);
 			saveHighContrast(enabled);
+		});
+	}
+
+	const backgroundDynamicCheckbox = root.querySelector('#backgroundDny');
+	if (backgroundDynamicCheckbox && backgroundDynamicCheckbox.dataset.a11yBound !== 'true') {
+		backgroundDynamicCheckbox.dataset.a11yBound = 'true';
+		backgroundDynamicCheckbox.checked = getSavedBackgroundDynamic();
+		backgroundDynamicCheckbox.addEventListener('change', (e) => {
+			const enabled = e.target.checked;
+			applyBackgroundDynamic(enabled);
+			saveBackgroundDynamic(enabled);
+		});
+	}
+
+	const sfxCheckbox = root.querySelector('#otherSFX');
+	if (sfxCheckbox && sfxCheckbox.dataset.a11yBound !== 'true') {
+		sfxCheckbox.dataset.a11yBound = 'true';
+		sfxCheckbox.checked = getSavedSFX();
+		sfxCheckbox.addEventListener('change', (e) => {
+			saveSFX(e.target.checked);
 		});
 	}
 }

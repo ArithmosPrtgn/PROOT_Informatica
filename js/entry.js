@@ -11,7 +11,6 @@ import './anim/detailsOpenClose.js';
 import './anim/detailsOpenCloseHeader.js';
 import './copyButton/copy.js';
 import './search/index.js';
-import './a11y/textSize/index.js';
 import './darkMode/themeToggle.js';
 import './saveAs/index.js';
 
