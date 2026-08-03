@@ -29,7 +29,6 @@
 }
 
 #NavLoL { min-height: 18vh; }
-#NavS, #NavO { min-height: 13vh; }
 
 nav {
     width: 95%;
@@ -124,6 +123,10 @@ nav {
         transform: translateY(0) scale(1) rotate(0deg);
         opacity: 1;
     }
+}
+
+#subtitle {
+    color: #fafafa;
 }
 
 .icoAniTheme.is-leaving { animation: themeIconSlideOut 190ms cubic-bezier(0.7, 0, 0.84, 0) forwards; }
