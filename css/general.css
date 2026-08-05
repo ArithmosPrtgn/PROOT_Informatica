@@ -227,7 +227,7 @@ button:active, .fakeButton:active {
     transition: 0.3s;
 }
 
-button:hover::before, .fakeButton:hover::before { transform: scale(calc(1 + (1/3))); }
+button:active::before, .fakeButton:active::before { transform: scale(calc(1 + (1/3))); }
 
 #CTAButton { background-color: var(--accentColor); }
 
