@@ -58,8 +58,8 @@ h4 {
     margin: 0;
 }
 
-h5 { font-size: calc(clamp(0.6rem, 1.1vw, 0.9rem)  * var(--text-scale));}
-h6 { font-size: calc(clamp(0.4rem, 0.9vw, 0.7rem)  * var(--text-scale));}
+h5 { font-size: calc(clamp(0.6rem, 1.1vw, 0.9rem)  * var(--text-scale)); margin: 0; }
+h6 { font-size: calc(clamp(0.4rem, 0.9vw, 0.7rem)  * var(--text-scale)); margin: 0; }
 
 p {
     font-size: calc(clamp(0.9rem, 1.25vw, 1rem) * var(--text-scale));
