@@ -5,6 +5,7 @@
                 <h1>MENU</h1>
                 <button id="iQuit">
                     <span aria-hidden="true" class="material-symbols-rounded iconMNeedsSpace iconM">close</span>
+                    <span class="material-symbols-rounded iconMNeedsSpace iconM vlb-ignore">close</span>
                     <h4>Sair</h4>
                 </button>
             </div>    
@@ -12,7 +13,7 @@
         <br>
         <div class="optionAccess" id="textSized">
             <div>
-                <span aria-hidden="true" class="material-symbols-rounded iconMNeedsSpace iconM">format_size</span>
+                <span aria-hidden="true" class="material-symbols-rounded iconMNeedsSpace iconM vlb-ignore">format_size</span>
                 <h4>Tamanho de texto:</h4>
             </div>
             <br>
@@ -28,38 +29,51 @@
         </div>
         <div class="optionAccess">
             <div>
-                <span aria-hidden="true" class="material-symbols-rounded iconMNeedsSpace iconM">animation</span>
+                <span aria-hidden="true" class="material-symbols-rounded iconMNeedsSpace iconM vlb-ignore">animation</span>
                 <h4>Animações:</h4>
             </div>
             <span class="chck"><input type="checkbox" id="animatedWebsite" checked></span>
         </div>
         <div class="optionAccess">
             <div>
-                <span aria-hidden="true" class="material-symbols-rounded iconMNeedsSpace iconM">contrast</span>
+                <span aria-hidden="true" class="material-symbols-rounded iconMNeedsSpace iconM vlb-ignore">contrast</span>
                 <h4>Alto Contraste:</h4>
             </div>
             <span class="chck"><input type="checkbox" id="highContrast"></span>
         </div>
         <div class="optionAccess">
             <div>
-                <span aria-hidden="true" class="material-symbols-rounded iconMNeedsSpace iconM">landscape_2</span>
+                <span aria-hidden="true" class="material-symbols-rounded iconMNeedsSpace iconM vlb-ignore">landscape_2</span>
                 <h4>Plano de Fundo Dinâmico:</h4>
             </div>
             <span class="chck"><input type="checkbox" id="backgroundDny" checked></span>
         </div>
         <div class="optionAccess">
             <div>
-                <span aria-hidden="true" class="material-symbols-rounded iconMNeedsSpace iconM">volume_up</span>
+                <span aria-hidden="true" class="material-symbols-rounded iconMNeedsSpace iconM vlb-ignore">volume_up</span>
                 <h4>SFX:</h4>
             </div>
             <span class="chck"><input type="checkbox" id="otherSFX" checked></span>
         </div>
         <div class="optionAccess">
             <div>
-                <span aria-hidden="true" class="material-symbols-rounded iconMNeedsSpace iconM">sign_language</span>
+                <span aria-hidden="true" class="material-symbols-rounded iconMNeedsSpace iconM vlb-ignore">sign_language</span>
                 <h4>VLIBRAS:</h4>
             </div>
             <span class="chck"><input type="checkbox" id="vlibras" checked></span>
+        </div>
+        <div class="optionAccess">
+            <div>
+                <span aria-hidden="true" class="material-symbols-rounded iconMNeedsSpace iconM vlb-ignore">language</span>
+                <h4>Idioma:</h4><br>
+            </div>
+            <select name="language" id="languageSelect">
+                <option value="pt" selected>PT</option>
+                <option value="en">EN</option>
+                <option value="es">ES</option>
+                <option value="fr">FR</option>
+                <option value="de">DE</option>
+            </select>
         </div>
     </div>
     <div id="lowerContent">
@@ -73,6 +87,15 @@
         </button>
         <button class="HBButtons" id="saveOffline">
             <span id="saveAsIco" aria-hidden="true" class="material-symbols-rounded iconAniSA iconMNeedsSpace iconM">print</span>
+            <span id="themeIco" class="material-symbols-rounded icoAniTheme iconMNeedsSpace vlb-ignore">moon_stars</span>
+            <h4>Alternar Modo Escuro</h4>
+        </button>
+        <button class="HBButtons" id="Retro" onclick="window.location.href='/'">
+            <span id="Rico" class="material-symbols-rounded icoAniR iconMNeedsSpace iconM vlb-ignore">home</span>
+            <h4>Página inicial</h4>
+        </button>
+        <button class="HBButtons" id="saveOffline">
+            <span id="saveAsIco" class="material-symbols-rounded iconAniSA iconMNeedsSpace iconM vlb-ignore">print</span>
             <h4>Salvar Offline</h4>
         </button>
     </div>

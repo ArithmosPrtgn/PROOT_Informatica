@@ -202,39 +202,22 @@ button, .fakeButton {
     box-sizing: border-box;
 }
 
-button::before, .fakeButton::before {
-    position: absolute;
-    inset: 0;
-    content: "";
-    border-radius: 20px;
-    border: 2px solid var(--invertedNonAccentColor);
-    background: transparent;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    z-index: 0;
-    pointer-events: none;
-}
-
-button > *, .fakeButton > * {
-    position: relative;
-    z-index: 1;
-    pointer-events: none;
-    transition: transform 0.3s ease;
-}
-
 a { color: var(--invertedNonAccentColor); }
 
 button:hover::before, .fakeButton:hover::before {
     box-shadow: 0px 0px 0px 5px var(--invertedNonAccentColor);
-    transform: scale(0.9);
+    transform: scale(1.11);
+    transition: 0.3s;
 }
 
-button:hover > *, .fakeButton:hover > * {
-    transform: scale(0.9);
-}
-
-button:active::before, .fakeButton:active::before {
+button:active, .fakeButton:active {
     box-shadow: 0 0 0 15px var(--invertedNonAccentColor);
-    transform: scale(0.75);
+    transform: translateY(0) scale(1.25);
+    transition: 0.3s;
+}
+
+#CTAButton::before { 
+    background-color: var(--accentColor); 
 }
 
 button:active > *, .fakeButton:active > * {
