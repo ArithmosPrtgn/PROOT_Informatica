@@ -26,18 +26,6 @@
 
 .linkMe h3 { margin: 0 0 0 5px; }
 
-.linkMe:hover {
-    box-shadow: 0px 0px 0px 5px var(--invertedNonAccentColor);
-    transform: scale(1.05);
-    transition: 0.3s;
-}
-
-.linkMe:active {
-    box-shadow: 0 0 0 17px var(--invertedNonAccentColor);
-    transform: scale(0.9);
-    transition: 0.3s;
-}
-
 .linkMe svg, .linkMe img {
     width: clamp(48px, 6vw, 80px);
     height: clamp(48px, 6vw, 80px);

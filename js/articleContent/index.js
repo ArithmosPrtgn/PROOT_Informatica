@@ -75,6 +75,7 @@ function createMenuLabel(text, iconName) {
 	if (iconName) {
 		const icon = document.createElement('span');
 		icon.className = 'material-symbols-rounded navigationArticleIcon';
+		icon.setAttribute('aria-hidden', 'true');
 		icon.textContent = iconName;
 		label.append(icon);
 	}
@@ -124,6 +125,7 @@ function createCallout(item) {
 	const headerGroup = document.createElement('div');
 	const icon = document.createElement('span');
 	icon.className = 'material-symbols-rounded foregroundCallOutIcon';
+	icon.setAttribute('aria-hidden', 'true');
 	icon.textContent = getCalloutIcon(item?.categoria);
 
 	const title = document.createElement('h3');
@@ -136,6 +138,7 @@ function createCallout(item) {
 	toggleButton.className = 'toggleContent';
 	const toggleIcon = document.createElement('span');
 	toggleIcon.className = 'material-symbols-rounded iconM';
+	toggleIcon.setAttribute('aria-hidden', 'true');
 	toggleIcon.textContent = 'keyboard_arrow_up';
 	toggleButton.append(toggleIcon);
 
@@ -197,6 +200,7 @@ function createCodeBlock(item) {
 
 	const icon = document.createElement('span');
 	icon.className = 'material-symbols-rounded iconM iconMNeedsSpace';
+	icon.setAttribute('aria-hidden', 'true');
 	icon.textContent = 'content_copy';
 
 	const label = document.createElement('h4');
@@ -487,6 +491,7 @@ function applyStructureToNav() {
 	}
 
 	document.title = `${state.structure?.tituloPrincipal || 'PROOT'} - ${initialLabel}`;
+}
 
 if (state.navIcon && state.structure) {
 	const iconNode = state.navIcon;
@@ -514,7 +519,6 @@ if (state.navIcon && state.structure) {
 		iconNode.replaceWith(parsedIcon);
 		state.navIcon = parsedIcon;
 	}
-}
 }
 }
 
