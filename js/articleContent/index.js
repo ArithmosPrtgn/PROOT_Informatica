@@ -74,7 +74,7 @@ function createMenuLabel(text, iconName) {
 
 	if (iconName) {
 		const icon = document.createElement('span');
-		icon.className = 'material-symbols-rounded navigationArticleIcon';
+		icon.className = 'material-symbols-rounded navigationArticleIcon vlb-ignore';
 		icon.setAttribute('aria-hidden', 'true');
 		icon.textContent = iconName;
 		label.append(icon);
@@ -199,7 +199,7 @@ function createCodeBlock(item) {
 	button.setAttribute('aria-label', 'Copiar código');
 
 	const icon = document.createElement('span');
-	icon.className = 'material-symbols-rounded iconM iconMNeedsSpace';
+	icon.className = 'material-symbols-rounded iconM iconMNeedsSpace vlb-ignore';
 	icon.setAttribute('aria-hidden', 'true');
 	icon.textContent = 'content_copy';
 
