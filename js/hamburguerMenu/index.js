@@ -20,8 +20,8 @@ let sfxAudio = null;
 
 // ---- VLIBRAS
 function getSavedVLIBRAS(){
-	const saved = parseFloat(localStorage.getItem(VLIBRAS_STORAGE_KEY));
-	return saved !== null ? saved === 'true' : true;
+	const saved = localStorage.getItem(VLIBRAS_STORAGE_KEY);
+	return saved !== null ? saved === "true" : "true";
 }
 
 function applyVLIBRAS(enabled){
