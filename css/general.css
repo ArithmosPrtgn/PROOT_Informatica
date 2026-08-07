@@ -213,10 +213,12 @@ button::before, .fakeButton::before {
     z-index: 0;
     pointer-events: none;
 }
+
 button > *, .fakeButton > * {
     position: relative;
     z-index: 1;
     pointer-events: none;
+    transition: transform 0.3s ease;
 }
 
 a { color: var(--invertedNonAccentColor); }
@@ -226,9 +228,21 @@ button:hover::before, .fakeButton:hover::before {
     transform: scale(0.9);
 }
 
+button:hover > *, .fakeButton:hover > * {
+    transform: scale(0.9);
+}
+
 button:active::before, .fakeButton:active::before {
     box-shadow: 0 0 0 15px var(--invertedNonAccentColor);
     transform: scale(0.75);
+}
+
+button:active > *, .fakeButton:active > * {
+    transform: scale(0.75);
+}
+
+#CTAButton::before { 
+    background-color: var(--accentColor); 
 }
 
 #CTAButton { background-color: var(--accentColor); }
