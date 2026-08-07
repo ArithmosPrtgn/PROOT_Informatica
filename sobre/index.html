@@ -14,7 +14,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Informática PROOT - Sobre" />
     <meta name="twitter:description" content="O PROOT - Programa de Orientações e Respostas para Todos - é uma iniciativo extencionista do IFSULDEMINAS para prover conhecimento a qualquer momento do dia para estudantes de todos os períodos." />
-    <meta name="twitter:image" content="https://info.proot.top/resources/favicon.svg />
+    <meta name="twitter:image" content="https://info.proot.top/resources/favicon.svg" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,6 +26,16 @@
 </head>
 <body>
     <script src="/js/bundle.js" defer></script>
+    <div id="vlibras-container" vw class="enabled" style="display: none;">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+    </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
     <noscript><meta http-equiv="refresh" content="0 url=/err/other/javascript.html"></noscript>
 
     {% include "navSobre.html"%}

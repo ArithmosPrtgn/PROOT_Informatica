@@ -4,9 +4,10 @@
     flex-wrap: wrap;
 }
 
-.optionAccess {justify-content: space-between; width: 100%; margin: 10px 0;}
+.optionAccess {justify-content: space-between; width: 100%; margin: 10px 0; align-items: center;}
 
 #textSized {
+    align-items: flex-start;
     flex-direction: column !important;
 }
 

@@ -10,6 +10,7 @@ const ANIMATIONS_STORAGE_KEY = 'a11yAnimations';
 const HIGH_CONTRAST_STORAGE_KEY = 'a11yHighContrast';
 const BACKGROUND_DYNAMIC_STORAGE_KEY = 'a11yBackgroundDynamic';
 const SFX_STORAGE_KEY = 'a11ySFX';
+const VLIBRAS_STORAGE_KEY= 'a11yVLIBRAS';
 
 const DEFAULT_TEXT_SCALE = 1;
 
@@ -17,7 +18,35 @@ const DYNAMIC_BG_SELECTOR = '.bg, .bg2, .bg3';
 const sfxClickSoundUrl = '/resources/sfx/button.wav';
 let sfxAudio = null;
 
-// ---- Text Size ----
+// ---- VLIBRAS
+function getSavedVLIBRAS(){
+	const saved = parseFloat(localStorage.getItem(VLIBRAS_STORAGE_KEY));
+	return saved !== null ? saved === 'true' : true;
+}
+
+function applyVLIBRAS(enabled){
+	const container = document.getElementById('vlibras-container');
+	if (!container) return;
+
+	if (enabled) {
+		container.style.display = 'block';
+	} else {
+		container.style.display = 'none';
+    
+    const closeBtn = container.querySelector('.vp-close');
+    if (closeBtn) closeBtn.click();
+  }
+}
+
+function saveVLIBRAS(enabled) {
+	try {
+		localStorage.setItem(VLIBRAS_STORAGE_KEY, String(enabled));
+	} catch (error) {
+		console.warn('Falha ao salvar estado do VLIBRAS:', error);
+	}
+}
+
+// ---- Text Size 
 function getSavedTextScale() {
 	const saved = parseFloat(localStorage.getItem(TEXT_SIZE_STORAGE_KEY));
 	return Number.isFinite(saved) ? saved : DEFAULT_TEXT_SCALE;
@@ -35,7 +64,7 @@ function saveTextScale(scale) {
 	}
 }
 
-// ---- Animations ----
+// ---- Animations 
 function getSavedAnimations() {
 	const saved = localStorage.getItem(ANIMATIONS_STORAGE_KEY);
 	return saved !== null ? saved === 'true' : true;
@@ -57,7 +86,7 @@ function saveAnimations(enabled) {
 	}
 }
 
-// ---- High Contrast ----
+// ---- High Contrast
 function getSavedHighContrast() {
 	const saved = localStorage.getItem(HIGH_CONTRAST_STORAGE_KEY);
 	return saved === 'true';
@@ -79,7 +108,7 @@ function saveHighContrast(enabled) {
 	}
 }
 
-// ---- Dynamic Background ----
+// ---- Dynamic Background
 function getSavedBackgroundDynamic() {
 	const saved = localStorage.getItem(BACKGROUND_DYNAMIC_STORAGE_KEY);
 
@@ -102,7 +131,7 @@ function saveBackgroundDynamic(enabled) {
 	}
 }
 
-// ---- SFX ----
+// ---- SFX
 function getSavedSFX() {
 	const saved = localStorage.getItem(SFX_STORAGE_KEY);
 
@@ -148,6 +177,7 @@ function initSFXListener() {
 applyTextScale(getSavedTextScale());
 applyAnimations(getSavedAnimations());
 applyHighContrast(getSavedHighContrast());
+applyVLIBRAS(getSavedVLIBRAS());
 initSFXListener();
 
 function applySavedBackgroundDynamicWhenReady() {
@@ -311,6 +341,17 @@ function initHamburgerA11yControls(root) {
 		sfxCheckbox.checked = getSavedSFX();
 		sfxCheckbox.addEventListener('change', (e) => {
 			saveSFX(e.target.checked);
+		});
+	}
+
+	const vlibrasCheckbox = root.querySelector('#vlibras');
+	if (vlibrasCheckbox && vlibrasCheckbox.dataset.a11yBound !== 'true') {
+		vlibrasCheckbox.dataset.a11yBound = 'true';
+		vlibrasCheckbox.checked = getSavedVLIBRAS();
+		vlibrasCheckbox.addEventListener('change', (e) => {
+			const enabled = e.target.checked;
+			applyVLIBRAS(enabled);
+			saveVLIBRAS(enabled);
 		});
 	}
 }
