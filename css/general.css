@@ -194,7 +194,7 @@ button, .fakeButton {
     max-width: 100%;
     font-family: inherit;
     background: transparent;
-    border: none;
+    border: 3px solid var(--invertedNonAccentColor);
     color: var(--invertedNonAccentColor);
     padding: 10px;
     cursor: pointer;
@@ -204,24 +204,24 @@ button, .fakeButton {
 
 a { color: var(--invertedNonAccentColor); }
 
-button:hover::before, .fakeButton:hover::before {
+button:hover, .fakeButton:hover {
     box-shadow: 0px 0px 0px 5px var(--invertedNonAccentColor);
-    transform: scale(1.11);
+    transition: 0.3s;
+}
+
+button:hover > *, .fakeButton:hover > * {
+    transform: scale(0.9);
     transition: 0.3s;
 }
 
 button:active, .fakeButton:active {
     box-shadow: 0 0 0 15px var(--invertedNonAccentColor);
-    transform: translateY(0) scale(1.25);
     transition: 0.3s;
 }
 
-#CTAButton::before { 
-    background-color: var(--accentColor); 
-}
-
-#CTAButton::before { 
-    background-color: var(--accentColor); 
+button:active > *, .fakeButton:active > * {
+    transform: scale(0.75);
+    transition: 0.3s;
 }
 
 #CTAButton { background-color: var(--accentColor); }
