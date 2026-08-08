@@ -193,6 +193,7 @@ button, .fakeButton {
     min-width: 0;
     max-width: 100%;
     font-family: inherit;
+    border-radius: 25px;
     background: transparent;
     border: 3px solid var(--invertedNonAccentColor);
     color: var(--invertedNonAccentColor);
@@ -215,7 +216,7 @@ button:hover > *, .fakeButton:hover > * {
 }
 
 button:active, .fakeButton:active {
-    box-shadow: 0 0 0 15px var(--invertedNonAccentColor);
+    box-shadow: 0 0 0 10px var(--invertedNonAccentColor);
     transition: 0.3s;
 }
 
