@@ -220,10 +220,6 @@ button:active, .fakeButton:active {
     background-color: var(--accentColor); 
 }
 
-button:active > *, .fakeButton:active > * {
-    transform: scale(0.75);
-}
-
 #CTAButton::before { 
     background-color: var(--accentColor); 
 }
