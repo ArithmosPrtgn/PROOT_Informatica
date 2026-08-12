@@ -12,7 +12,7 @@
         },
         {
             "nomeS": "Estrutura do Documento e Metadados",
-            "iconGMS": "insert_drive_file"
+            "iconGMS": "file_open"
         },
         {
             "nomeS": "Síntaxe e Atributos",
@@ -52,7 +52,7 @@
         },
         {
             "nomeS": "APIs do HTML5",
-            "iconGMS": "settings_api",
+            "iconGMS": "settings",
             "subSections": [
                 { "nomeSS": "Canvas API" },
                 { "nomeSS": "Web Storage" }
