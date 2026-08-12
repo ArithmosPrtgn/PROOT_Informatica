@@ -1,0 +1,78 @@
+{
+    "tituloPrincipal": "HTML5",
+    "iconeLoc": "/resources/ico/c/html.svg",
+    "secao": [
+        {
+            "nomeS": "Introdução",
+            "iconGMS": "play_arrow"
+        },
+        {
+            "nomeS": "História",
+            "iconGMS": "history"
+        },
+        {
+            "nomeS": "Estrutura do Documento e Metadados",
+            "iconGMS": "insert_drive_file"
+        },
+        {
+            "nomeS": "Síntaxe e Atributos",
+            "iconGMS": "code_xml",
+            "subSections": [
+                { "nomeSS": "Tags" },
+                { "nomeSS": "Atributos Globais e Data-*" }
+            ]
+        },
+        {
+            "nomeS": "Semântica HTML5",
+            "iconGMS": "schema",
+            "subSections": [
+                { "nomeSS": "Tags Semânticas vs Não Semânticas" },
+                { "nomeSS": "Estruturação de Layout" }
+            ]
+        },
+        {
+            "nomeS": "Textos",
+            "iconGMS": "text_ad"
+        },
+        {
+            "nomeS": "Tabelas e Listas",
+            "iconGMS": "table"
+        },
+        {
+            "nomeS": "Itens Audiovisuais",
+            "iconGMS": "image"
+        },
+        {
+            "nomeS": "Obtenção de Dados/Interatividade",
+            "iconGMS": "left_click",
+            "subSections": [
+                { "nomeSS": "Formulários (Forms)" },
+                { "nomeSS": "Inputs do HTML5" }
+            ]
+        },
+        {
+            "nomeS": "APIs do HTML5",
+            "iconGMS": "settings_api",
+            "subSections": [
+                { "nomeSS": "Canvas API" },
+                { "nomeSS": "Web Storage" }
+            ]
+        },
+        {
+            "nomeS": "Acessibilidade Básica",
+            "iconGMS": "accessibility"
+        },
+        {
+            "nomeS": "Caracteres Reservados",
+            "iconGMS": "text_format"
+        },
+        {
+            "nomeS": "Snippets",
+            "iconGMS": "code_blocks"
+        },
+        {
+            "nomeS": "Contéudo recomendado",
+            "iconGMS": "heart_check"
+        }
+    ]
+}
