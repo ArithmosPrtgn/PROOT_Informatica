@@ -201,6 +201,7 @@ button, .fakeButton {
     cursor: pointer;
     position: relative;
     box-sizing: border-box;
+    transition: 0.3s all;
 }
 
 a { color: var(--invertedNonAccentColor); }
@@ -210,18 +211,8 @@ button:hover, .fakeButton:hover {
     transition: 0.3s;
 }
 
-button:hover > *, .fakeButton:hover > * {
-    transform: scale(0.9);
-    transition: 0.3s;
-}
-
 button:active, .fakeButton:active {
     box-shadow: 0 0 0 10px var(--invertedNonAccentColor);
-    transition: 0.3s;
-}
-
-button:active > *, .fakeButton:active > * {
-    transform: scale(0.75);
     transition: 0.3s;
 }
 
