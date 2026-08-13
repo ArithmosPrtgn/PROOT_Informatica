@@ -5,7 +5,7 @@
         "tipo": "p",
         "texto": "O <strong>HTML</strong> - HyperText Markup Language - é uma linguagem mundialmente usada por qualquer aplicação baseada em navegadores. Essa linguagem foi criada por Tim Berners-Lee, que também criou protocolos. Atualmente, o HTML se localiza na versão 5, que foi desenvolvida pelo W3C (World Wide Web Consortium) e pela WHATWG (Web Hypertext Application Technology Working Group).\nO objetivo da linguagem é de estruturar o esqueleto e infomrações estáticas da página."
     }, {
-        "tipo": "p",
+        "tipo": "callout",
         "categoria": "warning",
         "titulo": "A grande pergunnta...",
         "texto": "<strong>HTML é ou não uma linguagem de programação?</strong>\nApesar de muitos conflitos sobre essa questão, ela <strong>não</strong> é uma linguagem de programação. Isso se dá pois o HTML, além de se declarar uma linguagem de marcação, é incapaz de realizar qualquer forma de lógica, delegando esta para o Javascript."
