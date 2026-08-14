@@ -63,8 +63,9 @@
             "texto": "<b>Negrito</b> e <strong>Destaque</strong>\n<br>\n<i>Itálico</i> e <em>ênfase</em>\n<br>\n<mark>Marcado</mark>\n<br>\n<del>Deletado</del> e <s>riscado</s>\n<br>\n<u>Sublinhado</u>"
         }, {
             "tipo": "image",
-            "caption": "Exemplos de alterações visuais. A primeira linha mostra destaque por negrito, a segunda, por itálico. A terceira linha tem fundo amarelo. A penúltima está riscada; a última, sublinhada."
-        }
+            "caption": "Exemplos de alterações visuais. A primeira linha mostra destaque por negrito, a segunda, por itálico. A terceira linha tem fundo amarelo. A penúltima está riscada; a última, sublinhada.",
+            "fileLocation": "/linguagens/html/img-textos/av.webp"
+        }   
          {
             "tipo": "outro",
             "texto": "<h2>Códigos e Citações</h2>"
