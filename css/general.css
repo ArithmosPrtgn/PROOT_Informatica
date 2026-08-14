@@ -541,4 +541,4 @@ body {
     align-items: center;
 }
 
-.articleContent > h1, .articleContent > h2, .articleContent > h3 { text-align: left; }
+.articleContent > h1, .outro > h2, .outro > h3  { text-align: left; }
