@@ -41,7 +41,7 @@
             "texto": "<h2>Textos comuns</h2>"
         }, {
             "tipo": "p",
-            "texto": "Quando queremos adicionar um texto, simplesmente podemos utilizar a tag <p>; Este é usado para parágrafos comuns. Para quebras de linhas, usa-se <br>."
+            "texto": "Quando queremos adicionar um texto, simplesmente podemos utilizar a tag <<i>p</i>>; Este é usado para parágrafos comuns. Para quebras de linhas, usa-se <<i>br</i>> - que não precisa de uma contraprte para fechar."
         }, {
             "tipo": "code",
             "titulo": "Parágrafos",
@@ -52,8 +52,26 @@
             "fileLocation": "/linguagens/html/img-textos/pqe.webp"
         }, {
             "tipo": "outro",
-            "texto": "<h2>Alterações visuais</h2>"
+            "texto": "<h2>Alterações Visuais</h2>"
+        }, {
+            "tipo": "p",
+            "texto": "Em algum momentos, precisamos dar um destaque, ou simplesmente 'cancelar' um texto. Por assim, há algumas tags para isso.\n<ul><li>Para destacar um texto, 'bold', usamos <<i>b</i>> ou <<i>strong</i>>, este dando a ideia semântica de importância;</li><li>Para o itálico, usamos <<i>i</i>>. Em outro caso, para ênfases, <<i>em</i>>, que também resulta em visualização itálica;</li><li>Para deixar um texto marcado: <<i>mark</i>;></li><li>Para riscar um texto, pode-se usar <<i>del</i>>, se for um texto 'deletado', ou <<i>s</i>>, se for algo não relevante.</li><li>Caso precise sublinhar, siga com <<i>u</i>></li></ul>"
+        },
+        {
+            "tipo": "code",
+            "titulo": "Destaques" ,
+            "texto": "<b>Negrito</b> e <strong>Destaque</strong>\n<br>\n<i>Itálico</i> e <em>ênfase</em>\n<br>\n<mark>Marcado</mark>\n<br>\n<del>Deletado</del> e <s>riscado</s>\n<br>\n<u>Sublinhado</u>"
+        }, {
+            "tipo": "image",
+            "caption": "Exemplos de alterações visuais. A primeira linha mostra destaque por negrito, a segunda, por itálico. A terceira linha tem fundo amarelo. A penúltima está riscada; a última, sublinhada."
         }
+         {
+            "tipo": "outro",
+            "texto": "<h2>Códigos e Citações</h2>"
+        }, {
+            "tipo": "outro",
+            "texto": "<h2>Textos Especiais</h2>"
+        }, 
     ]
 }
 ]
