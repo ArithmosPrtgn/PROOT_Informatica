@@ -65,8 +65,7 @@
             "tipo": "image",
             "caption": "Exemplos de alterações visuais. A primeira linha mostra destaque por negrito, a segunda, por itálico. A terceira linha tem fundo amarelo. A penúltima está riscada; a última, sublinhada.",
             "fileLocation": "/linguagens/html/img-textos/av.webp"
-        }   
-         {
+        }, {
             "tipo": "outro",
             "texto": "<h2>Códigos e Citações</h2>"
         }, {
