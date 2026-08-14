@@ -48,14 +48,14 @@
             "texto": "<p>Este é um parágrafo mal escrito.</p>\n<p>Meu segundo parágrafo.</p>\n<br>\n<p>Ótima ideia de parágrafo - depois de uma quebra de linha</p>\n<div>Este é um texto dentro de uma div</div>\n<div>Este é um texto dentro de uma div - parte 2</div>"
         }, {
             "tipo": "image",
-            "caption": "Parágrafos e quebras de espaço",
-            "fileLocation": "/linguagens/html/img-textos/pqe.webp"
+            "caption": "Parágrafos e quebras de linhas",
+            "fileLocation": "/linguagens/html/img-textos/parargrafos.webp"
         }, {
             "tipo": "outro",
             "texto": "<h2>Alterações Visuais</h2>"
         }, {
             "tipo": "p",
-            "texto": "Em algum momentos, precisamos dar um destaque, ou simplesmente 'cancelar' um texto. Por assim, há algumas tags para isso.\n<ul><li>Para destacar um texto, 'bold', usamos <<i>b</i>> ou <<i>strong</i>>, este dando a ideia semântica de importância;</li><li>Para o itálico, usamos <<i>i</i>>. Em outro caso, para ênfases, <<i>em</i>>, que também resulta em visualização itálica;</li><li>Para deixar um texto marcado: <<i>mark</i>;></li><li>Para riscar um texto, pode-se usar <<i>del</i>>, se for um texto 'deletado', ou <<i>s</i>>, se for algo não relevante.</li><li>Caso precise sublinhar, siga com <<i>u</i>></li></ul>"
+            "texto": "Em algum momentos, precisamos dar um destaque, ou simplesmente 'cancelar' um texto. Por assim, há algumas tags para isso.\n<ul><li>Para destacar um texto, 'bold', usamos <<i>b</i>> ou <<i>strong</i>>, este dando a ideia semântica de importância;</li><li>Para o itálico, usamos <<i>i</i>>. Em outro caso, para ênfases, <<i>em</i>>, que também resulta em visualização itálica;</li><li>Para deixar um texto marcado: <<i>mark</i>>;</li><li>Para riscar um texto, pode-se usar <<i>del</i>>, se for um texto 'deletado', ou <<i>s</i>>, se for algo não relevante;</li><li>Caso precise sublinhar, siga com <<i>u</i>>.</li></ul>"
         },
         {
             "tipo": "code",
