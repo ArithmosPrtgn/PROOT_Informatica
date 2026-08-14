@@ -70,22 +70,40 @@
             "texto": "<h2>Códigos e Citações</h2>"
         }, {
             "tipo": "p",
-            "texto": "Dependendo do conteúdo que deseja implantar em um site, talve seja necessário adicionar snippets de código ou citações de pessoas conhecidas. Para isso o HTML fornece um suporte básico com algumas modificações já embutidas.\nPara citações, existem 3 tags: <<i>blockquote</i>>, <<i>q</i>> e <<i>cite</i>>\n\n<<i>Blockquote</i>> é um bloco de texto indentado na página, diferenciando-o de outros textos na páginas; Ele, usualmente, vem com o attributo <code>cite</code>, que é um item que permite direcionar de onde foi retirado o texto, usado pelo máquina.\n <<i>q</i>> é uma versão 'lite' do <<i>blockquote</i>>, usado na mesma linha do texto. Neste caso, para segregação, é apenas adicionado um par de aspas ao redor do texto alvo. De forma conjunta com seu irmão maior, o atributo <code>cite</code> é utilizável.\nPor fim, temos o próprio cite, como tag. Esta tag apenas contém um texto dentro dela, com a mesma utilidade que seu sósia atributo. Este é diferenciado por itálico e também comsegue ser inserido em uma linha, como o <<i>q</i>>.\n\n"
+            "texto": "Dependendo do conteúdo que deseja implantar em um site, talve seja necessário adicionar snippets de código ou citações de pessoas conhecidas. Para isso o HTML fornece um suporte básico com algumas modificações já embutidas. Para citações, existem 3 tags: <<i>blockquote</i>>, <<i>q</i>> e <<i>cite</i>><br><br><<i>Blockquote</i>> é um bloco de texto indentado na página, diferenciando-o de outros textos na páginas; Ele, usualmente, vem com o attributo <code>cite</code>, que é um item que permite direcionar de onde foi retirado o texto, usado pelo máquina.<br><br><<i>q</i>> é uma versão 'lite' do <<i>blockquote</i>>, usado na mesma linha do texto. Neste caso, para segregação, é apenas adicionado um par de aspas ao redor do texto alvo. De forma conjunta com seu irmão maior, o atributo <code>cite</code> é utilizável.<br><br>Por fim, temos o próprio cite, como tag. Esta tag apenas contém um texto dentro dela, com a mesma utilidade que seu sósia atributo. Este é diferenciado por itálico e também comsegue ser inserido em uma linha, como o <<i>q</i>>."
         }, {
             "tipo": "code",
             "titulo": "Citações",
             "texto": "<blockquote cite=\"Steve Jobs\">\nYour work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle. As with all matters of the heart, you'll know when you find it.\n</blockquote>\n\n<p><q>Penso, logo existo.</q> <cite>René Descartes</cite></p>"
         }, {
             "tipo": "image",
-            "caption": "Três tags, dois textos. A primiera tag, <<i>blockquotes</i>>, indentou o bloco de texto, uma fala direta de Steve Jobs, para a direita. <<i>q</i>> apenas adicionou aspas a parrte do segundo texto, que lê: \"Penso, logo existo.\" Por fim, <<i>cite</i>> deixou o texto em itálico, que contém o nome de um autor, René Descartes.",
+            "caption": "Três tags, dois textos. A primeira tag, <blockquotes>, indentou o bloco de texto, uma fala direta de Steve Jobs, para a direita. <q> apenas adicionou aspas a parte do segundo texto, que lê: \"Penso, logo existo.\" Por fim, <cite> deixou o texto em itálico, que contém o nome de um autor, René Descartes.",
             "fileLocation": "/linguagens/html/img-textos/cite.webp"
         }, {
             "tipo": "p",
-            "texto": "Por outro lado, para códigos, o HTML dispõe de 4 tags principais: <<i>code</i>>, <<i>pre</i>>, <<i>kbd</i>> e <<i>var</i>>.\nO <<i>code</i>> é uma formas simples de definir que tal contéudo é código de computador, provindo-se de uma fonte monoespaçada, masa ainda se limita a texto em uma linha contínua. Para deixar o conteúdo sensível a qualquer espaço e quebra de linha, usa-se <<i>pre</i>>; Este nome vem de <i>preformatted</i>, pré-formatado.\n<<i>kyb</i>> é para teclas do computador, como CTRL + C. Para essa tag, o texto também é monoespaçado.\nPor último, <<i>var</i>> são usados para escrever variáveis, matemáticas ou algoríticas. Neste, o texto é itálico."
-        },
-        {
+            "texto": "Por outro lado, para códigos, o HTML dispõe de 4 tags principais: <<i>code</i>>, <<i>pre</i>>, <<i>kbd</i>> e <<i>var</i>>.<br<br>O <<i>code</i>> é uma formas simples de definir que tal contéudo é código de computador, provindo-se de uma fonte monoespaçada, masa ainda se limita a texto em uma linha contínua. Para deixar o conteúdo sensível a qualquer espaço e quebra de linha, usa-se <<i>pre</i>>; Este nome vem de <i>preformatted</i>, pré-formatado.<br><br><<i>kbd</i>> é para teclas do computador, como CTRL + C. Para essa tag, o texto também é monoespaçado.<br><br>Por último, <<i>var</i>> são usados para escrever variáveis, matemáticas ou algoríticas. Neste, o texto é itálico."
+        }, {
+            "tipo": "code",
+            "titulo": "Códigos",
+            "texto": "<p>Texto <var>x = 6</var></p>\n<p>Tecla: <kbd>CTRL</kbd></p>\n\n<code>printf(\"Hello World\")</code>\n<br>\n<pre>Esse\ntexto é\nPré-formatado<pre>"
+        }, {
+            "tipo": "image",
+            "caption": "Exemplos de uso de códigos.",
+            "fileLocation": "/linguagens/html/img-textos/codes.webp"
+        }, {
             "tipo": "outro",
             "texto": "<h2>Textos Especiais</h2>"
+        }, {
+            "tipo": "p",
+            "texto": "<<i>abbr</i>>: Define acrônimos ou abreviações. Segurar sobre ele revela o texto real. O texto real é tido como o atributo <code>title</code>.<br><<i>dfn</i>> é o destaque da palavra de uma frase ou parágrafo, deixando-o em itálico.<br><<i>address</i>> contém o endereço e informação de contato de alguém. Definido também em itálico.<br><<i>time</i>>: representa um momemnto de tempo e data de forma legível para máquinas. Contém atributo <code>datetime</code>, um data em formato ISO."
+        }, {
+            "tipo": "code",
+            "titulo": "Especiais",
+            "texto": "<time datetime=\"2026-12-25\">Natal</time><br>\n<p>Há quase <dfn>200</dfn> países, de acordo com a <abbr title=\"Organização das Nações Unidas\">ONU</abbr></p>\n<address>Rua Baluarte, São Paulo - SP</address>"
+        }, {
+            "tipo": "image",
+            "caption": "Três textos. <time> não altera o texto. <dfn> destaca palavras. <abbr> sublinha e deixa o texto visível ao passar o cursor por cima. <address> só deixa o texto itálico para representar um endereço.",
+            "fileLocation": "/linguagens/html/img-textos/sp.webp"
         }
     ]
 }
