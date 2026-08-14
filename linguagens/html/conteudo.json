@@ -36,6 +36,23 @@
             "tipo":"image",
             "caption":"Exemplos de Headings - 1 a 6",
             "fileLocation": "/linguagens/html/img-textos/headings.webp"
+        }, {
+            "tipo": "outro",
+            "texto": "<h2>Textos comuns</h2>"
+        }, {
+            "tipo": "p",
+            "texto": "Quando queremos adicionar um texto, simplesmente podemos utilizar a tag <p>; Este é usado para parágrafos comuns. Para quebras de linhas, usa-se <br>."
+        }, {
+            "tipo": "code",
+            "titulo": "Parágrafos",
+            "texto": "<p>Este é um parágrafo mal escrito.</p>\n<p>Meu segundo parágrafo.</p>\n<br>\n<p>Ótima ideia de parágrafo - depois de uma quebra de linha</p>\n<div>Este é um texto dentro de uma div</div>\n<div>Este é um texto dentro de uma div - parte 2</div>"
+        }, {
+            "tipo": "image",
+            "caption": "Parágrafos e quebras de espaço",
+            "fileLocation": "/linguagens/html/img-textos/pqe.webp"
+        }, {
+            "tipo": "outro",
+            "texto": "<h2>Alterações visuais</h2>"
         }
     ]
 }
