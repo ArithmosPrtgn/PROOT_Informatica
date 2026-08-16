@@ -3,7 +3,7 @@
     "nomeS": "Introdução",
     "conteudo": [{
         "tipo": "p",
-        "texto": "O <strong>HTML</strong> - HyperText Markup Language - é uma linguagem mundialmente usada por qualquer aplicação baseada em navegadores. Essa linguagem foi criada por Tim Berners-Lee, que também criou protocolos. Atualmente, o HTML se localiza na versão 5, que foi desenvolvida pelo W3C (World Wide Web Consortium) e pela WHATWG (Web Hypertext Application Technology Working Group).\nO objetivo da linguagem é de estruturar o esqueleto e infomrações estáticas da página."
+        "texto": "O <strong>HTML</strong> - HyperText Markup Language - é uma linguagem mundialmente usada por qualquer aplicação baseada em navegadores. Essa linguagem foi criada por Tim Berners-Lee, que também criou protocolos. Atualmente, o HTML se localiza na versão 5, que foi desenvolvida pelo W3C (World Wide Web Consortium) e pela WHATWG (Web Hypertext Application Technology Working Group).\nO objetivo da linguagem é de estruturar o esqueleto e informações estáticas da página."
     }, {
         "tipo": "callout",
         "categoria": "warning",
@@ -13,7 +13,7 @@
         "tipo": "callout",
         "categoria": "yes",
         "titulo": "Características principais",
-        "texto": "<ul><li>Linguagem de Marcação primária para sites.</li><li>Intepretada por navegadores (Edge, Chrome, Firefox etc.);</li><li>Funciona por tags: aberta por < e fechada por >;</li><li>Arquivo reconhecido com o final .html;</li><li>Estrutura qualquer mídia e texto para o usuário, com o estilo padrão.</li></ul>"
+        "texto": "<ul><li>Linguagem de Marcação primária para sites.</li><li>Interpretada por navegadores (Edge, Chrome, Firefox etc.);</li><li>Funciona por tags: aberta por < e fechada por >;</li><li>Arquivo reconhecido com o final .html;</li><li>Estrutura qualquer mídia e texto para o usuário, com o estilo padrão.</li></ul>"
     }
     ]
 }, {
@@ -21,13 +21,13 @@
     "conteudo": [
         {
             "tipo": "p",
-            "texto": "Aqui, será abordado as principais tags de texto. Considera-se texto qualquer item escrito livremente em uma página , seja um título, ou parágrafo."
+            "texto": "Aqui, serão abordadas as principais tags de texto. Considera-se texto qualquer item escrito livremente em uma página, seja um título, ou parágrafo."
         }, {
             "tipo": "outro",
             "texto" : "<h2>Títulos</h2>"
         }, {
             "tipo": "p",
-            "texto": "Títulos são textos que merecem um destaques do leitor. Para isso, esse texto deve aumentar de tamanho, capturando a atenção.\n\n Esse são trabalhos para as tags <<code>h#</code>>, onde # é um número de 1 a 6. Conforme a importância do texto a ser apresentado, ele altera o tamanho do texto. Nisso, o valor 1 é descrito como o mais importante e 6 descrito como o menos importante. Para isso, pode-se usar de exemplo o seguinte código:"
+            "texto": "Títulos são textos que merecem um destaque do leitor. Para isso, esse texto deve aumentar de tamanho, capturando a atenção.\n\n Esses são trabalhos para as tags <<code>h#</code>>, onde # é um número de 1 a 6. Conforme a importância do texto a ser apresentado, ele altera o tamanho do texto. Nisso, o valor 1 é descrito como o mais importante e 6 descrito como o menos importante. Para isso, pode-se usar de exemplo o seguinte código:"
         }, {
             "tipo": "code",
             "titulo": "Snippets de Título",
@@ -41,7 +41,7 @@
             "texto": "<h2>Textos comuns</h2>"
         }, {
             "tipo": "p",
-            "texto": "Quando queremos adicionar um texto, simplesmente podemos utilizar a tag <<i>p</i>>; Este é usado para parágrafos comuns. Para quebras de linhas, usa-se <<i>br</i>> - que não precisa de uma contraprte para fechar."
+            "texto": "Quando queremos adicionar um texto, simplesmente podemos utilizar a tag <<i>p</i>>; Este é usado para parágrafos comuns. Para quebras de linhas, usa-se <<i>br</i>> - que não precisa de uma contraparte para fechar."
         }, {
             "tipo": "code",
             "titulo": "Parágrafos",
@@ -55,7 +55,7 @@
             "texto": "<h2>Alterações Visuais</h2>"
         }, {
             "tipo": "p",
-            "texto": "Em algum momentos, precisamos dar um destaque, ou simplesmente 'cancelar' um texto. Por assim, há algumas tags para isso.\n<ul><li>Para destacar um texto, 'bold', usamos <<i>b</i>> ou <<i>strong</i>>, este dando a ideia semântica de importância;</li><li>Para o itálico, usamos <<i>i</i>>. Em outro caso, para ênfases, <<i>em</i>>, que também resulta em visualização itálica;</li><li>Para deixar um texto marcado: <<i>mark</i>>;</li><li>Para riscar um texto, pode-se usar <<i>del</i>>, se for um texto 'deletado', ou <<i>s</i>>, se for algo não relevante;</li><li>Caso precise sublinhar, siga com <<i>u</i>>.</li></ul>"
+            "texto": "Em alguns momentos, precisamos dar um destaque, ou simplesmente 'cancelar' um texto. Por assim, há algumas tags para isso.\n<ul><li>Para destacar um texto, 'bold', usamos <<i>b</i>> ou <<i>strong</i>>, este dando a ideia semântica de importância;</li><li>Para o itálico, usamos <<i>i</i>>. Em outro caso, para ênfases, <<i>em</i>>, que também resulta em visualização itálica;</li><li>Para deixar um texto marcado: <<i>mark</i>>;</li><li>Para riscar um texto, pode-se usar <<i>del</i>>, se for um texto 'deletado', ou <<i>s</i>>, se for algo não relevante;</li><li>Caso precise sublinhar, siga com <<i>u</i>>.</li></ul>"
         },
         {
             "tipo": "code",
@@ -70,7 +70,7 @@
             "texto": "<h2>Códigos e Citações</h2>"
         }, {
             "tipo": "p",
-            "texto": "Dependendo do conteúdo que deseja implantar em um site, talve seja necessário adicionar snippets de código ou citações de pessoas conhecidas. Para isso o HTML fornece um suporte básico com algumas modificações já embutidas. Para citações, existem 3 tags: <<i>blockquote</i>>, <<i>q</i>> e <<i>cite</i>><br><br><<i>Blockquote</i>> é um bloco de texto indentado na página, diferenciando-o de outros textos na páginas; Ele, usualmente, vem com o attributo <code>cite</code>, que é um item que permite direcionar de onde foi retirado o texto, usado pelo máquina.<br><br><<i>q</i>> é uma versão 'lite' do <<i>blockquote</i>>, usado na mesma linha do texto. Neste caso, para segregação, é apenas adicionado um par de aspas ao redor do texto alvo. De forma conjunta com seu irmão maior, o atributo <code>cite</code> é utilizável.<br><br>Por fim, temos o próprio cite, como tag. Esta tag apenas contém um texto dentro dela, com a mesma utilidade que seu sósia atributo. Este é diferenciado por itálico e também comsegue ser inserido em uma linha, como o <<i>q</i>>."
+            "texto": "Dependendo do conteúdo que deseja implantar em um site, talvez seja necessário adicionar snippets de código ou citações de pessoas conhecidas. Para isso o HTML fornece um suporte básico com algumas modificações já embutidas. Para citações, existem 3 tags: <<i>blockquote</i>>, <<i>q</i>> e <<i>cite</i>><br><br><<i>Blockquote</i>> é um bloco de texto indentado na página, diferenciando-o de outros textos na página; Ele, usualmente, vem com o atributo <code>cite</code>, que é um item que permite direcionar de onde foi retirado o texto, usado pela máquina.<br><br><<i>q</i>> é uma versão 'lite' do <<i>blockquote</i>>, usado na mesma linha do texto. Neste caso, para segregação, é apenas adicionado um par de aspas ao redor do texto alvo. De forma conjunta com seu irmão maior, o atributo <code>cite</code> é utilizável.<br><br>Por fim, temos o próprio cite, como tag. Esta tag apenas contém um texto dentro dela, com a mesma utilidade que seu sósia atributo. Este é diferenciado por itálico e também consegue ser inserido em uma linha, como o <<i>q</i>>."
         }, {
             "tipo": "code",
             "titulo": "Citações",
@@ -81,7 +81,7 @@
             "fileLocation": "/linguagens/html/img-textos/cite.webp"
         }, {
             "tipo": "p",
-            "texto": "Por outro lado, para códigos, o HTML dispõe de 4 tags principais: <<i>code</i>>, <<i>pre</i>>, <<i>kbd</i>> e <<i>var</i>>.<br<br>O <<i>code</i>> é uma formas simples de definir que tal contéudo é código de computador, provindo-se de uma fonte monoespaçada, masa ainda se limita a texto em uma linha contínua. Para deixar o conteúdo sensível a qualquer espaço e quebra de linha, usa-se <<i>pre</i>>; Este nome vem de <i>preformatted</i>, pré-formatado.<br><br><<i>kbd</i>> é para teclas do computador, como CTRL + C. Para essa tag, o texto também é monoespaçado.<br><br>Por último, <<i>var</i>> são usados para escrever variáveis, matemáticas ou algoríticas. Neste, o texto é itálico."
+            "texto": "Por outro lado, para códigos, o HTML dispõe de 4 tags principais: <<i>code</i>>, <<i>pre</i>>, <<i>kbd</i>> e <<i>var</i>>.<br><br>O <<i>code</i>> é uma forma simples de definir que tal conteúdo é código de computador, provindo de uma fonte monoespaçada, mas ainda se limita a texto em uma linha contínua. Para deixar o conteúdo sensível a qualquer espaço e quebra de linha, usa-se <<i>pre</i>>; Este nome vem de <i>preformatted</i>, pré-formatado.<br><br><<i>kbd</i>> é para teclas do computador, como CTRL + C. Para essa tag, o texto também é monoespaçado.<br><br>Por último, <<i>var</i>> são usados para escrever variáveis, matemáticas ou algorítmicas. Neste, o texto é itálico."
         }, {
             "tipo": "code",
             "titulo": "Códigos",
@@ -95,7 +95,7 @@
             "texto": "<h2>Textos Especiais</h2>"
         }, {
             "tipo": "p",
-            "texto": "<<i>abbr</i>>: Define acrônimos ou abreviações. Segurar sobre ele revela o texto real. O texto real é tido como o atributo <code>title</code>.<br><<i>dfn</i>> é o destaque da palavra de uma frase ou parágrafo, deixando-o em itálico.<br><<i>address</i>> contém o endereço e informação de contato de alguém. Definido também em itálico.<br><<i>time</i>>: representa um momemnto de tempo e data de forma legível para máquinas. Contém atributo <code>datetime</code>, um data em formato ISO."
+            "texto": "<<i>abbr</i>>: Define acrônimos ou abreviações. Segurar sobre ele revela o texto real. O texto real é tido como o atributo <code>title</code>.<br><<i>dfn</i>> é o destaque da palavra de uma frase ou parágrafo, deixando-o em itálico.<br><<i>address</i>> contém o endereço e informação de contato de alguém. Definido também em itálico.<br><<i>time</i>>: representa um momento de tempo e data de forma legível para máquinas. Contém atributo <code>datetime</code>, uma data em formato ISO."
         }, {
             "tipo": "code",
             "titulo": "Especiais",
@@ -106,5 +106,28 @@
             "fileLocation": "/linguagens/html/img-textos/sp.webp"
         }
     ]
+}, {
+    "nomeS": " Tabelas e Listas",
+    "conteudo": [{
+            "tipo": "outro",
+            "conteudo": "<h2>Listas>h2>"
+    },
+    {
+            "tipo": "p",
+            "texto": "Muitas vezes, queremos fazemos algumas listas e desenvolver um grupo relacionado de itens. Para isso, o HTML fornece três modalidade de listas: a ordernada, a desordenada, e a descritiva.\nPara a lista ordernadas e desordenadas, o texto deve estar estre as tags <<i>li</i>>.\n\nA lista orderanda é um tipo de lista onde a ordem é considerada. Para isso, o HTML fornece um indetação do texto algo, onde ele adiciona, nessa indentação um forma de identifcação única. Inicialmente, ela usa numerais (1, 2, 3...) para isso, mas isso pode ser alterado pelo atributo <code>type</code>. Para iniciar um lista ordenada, usa-se <<i>ol</i>>\n\nA lista desordenada faz a mesma lista, por outra condição: a ordem não é importante. Por isso, a indentação continua, pelo contracheque que, agora, será inserido um símbolo (um círculo completo) ao invés do numeral. Para criar uma lista desordenada, use <<i>ul</i>>."
+    }, {
+            "tipo": "callout",
+            "categoria": "tip",
+            "titulo": "Quer algo diferente?",
+            "texto": "Em um arquivo CSS anexado, adicione os parâmetros <code>list-style ou list-style-type, list-style-image e list-style-position.</code> para a regra do cirador de listas!"
+    }, {
+            "tipo": "p",
+            "texto": "Por último, temos a descritiva. A descritiva, como o nome sugere, possibilita uma descrição para um elemento. Para isso, ha á tag <<i>dl</i>>, que define uma lista; <<i>dt</i>, definidor de termos da lista; e <<i>dd</i>, descritor do último termo da lista. Diferente dos demais, o item não tem qualquer modificação visível, porém, o descritor é indentado, mas sem símbolos, diferente de suas tags irmãs."
+    }, {
+            "tipo": "code",
+            "titulo": "Listas",
+            "texto": "<p>Principais itens nescessários para uma fursuit de protogen:</p>\n<ul>\n\t<li>Visor customizado</li>\n\t<li>Aritgos tecnológicos</li>\n\t<li>Pelo e costura</li>\n\t<li>Filamento 3D</li></ul>\n\n<p>Tarefas do mês</p>\n<ol>\n\t<li>Imprimir o molde 3D de algo que não derreta;</li>\n\t<li>Comprar chapa de plástico;</li>\n\t<li>Montar a madeira MDF;</li>\n\t<li>Esquentar o plástico e moldar ele.</li>\n</ol>\n\n<dl>\n<dt>Protogen:</dt>\n\t<dd>Uma espécie fictícia aberta para criações. É parcialmente biológico, tendo parte de seu corpo metal.</dd>\n<dt>Primagen:</dt>\t<dd>Espécie fechada,m as ningúem se importa. O que eles vão fazer? Processar por copyright?</dd>\n</dl>"
+    }
+]
 }
 ]
